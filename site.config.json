@@ -1,6 +1,6 @@
 {
-  "domaine": "",
-  "baseUrl": "/yohanmauve",
+  "domaine": "yomauve.re",
+  "baseUrl": "",
   "auteur": {
     "nom": "Yohan Mauve",
     "titre": "Infirmier, doctorant en sciences infirmières",
@@ -25,7 +25,7 @@
   },
   "_notes": [
     "domaine : renseigner après achat, sans https:// ni barre oblique finale.",
-    "baseUrl : actuellement /yohanmauve, car le site est servi depuis https://yowane974.github.io/yohanmauve/. IMPORTANT — le jour où le domaine personnalisé est branché, le site passe à la racine : remettre baseUrl à \"\" et renseigner domaine, sinon tous les liens internes et la feuille de style pointeront à côté.",
+    "baseUrl : vide, car le site est servi à la racine de yomauve.re. Ne le remplir (/nom-du-depot) que si le site repassait sur une URL github.io en sous-chemin.",
     "courriel_registre : l'adresse dédiée aux contributions. Actuellement l'adresse étudiante Université Laval — à remplacer par une adresse au nom de domaine dès son achat, car une adresse institutionnelle étudiante est fermée à la fin du cursus et emporterait avec elle le seul point de contact du registre.",
     "doi : DOI concept Zenodo — il pointe toujours vers la version la plus récente, inutile de le changer à chaque release."
   ]
