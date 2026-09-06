@@ -17,5 +17,12 @@
       "affiliation": "Université Laval",
       "orcid": "0009-0006-6179-4782"
     }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.22549104",
+      "relation": "isVersionOf",
+      "scheme": "doi"
+    }
   ]
 }

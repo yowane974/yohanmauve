@@ -19,7 +19,7 @@
     "sousTitre": "Répertoire francophone des cadres théoriques de la discipline infirmière",
     "version": "0.1.1",
     "date": "2026-09-06",
-    "doi": "",
+    "doi": "10.5281/zenodo.22549104",
     "licence": "CC BY 4.0",
     "licenceUrl": "https://creativecommons.org/licenses/by/4.0/deed.fr"
   },
@@ -27,6 +27,6 @@
     "domaine : renseigner après achat, sans https:// ni barre oblique finale.",
     "baseUrl : actuellement /yohanmauve, car le site est servi depuis https://yowane974.github.io/yohanmauve/. IMPORTANT — le jour où le domaine personnalisé est branché, le site passe à la racine : remettre baseUrl à \"\" et renseigner domaine, sinon tous les liens internes et la feuille de style pointeront à côté.",
     "courriel_registre : l'adresse dédiée aux contributions. Actuellement l'adresse étudiante Université Laval — à remplacer par une adresse au nom de domaine dès son achat, car une adresse institutionnelle étudiante est fermée à la fin du cursus et emporterait avec elle le seul point de contact du registre.",
-    "doi : à renseigner après la première publication Zenodo, puis à mettre à jour à chaque version."
+    "doi : DOI concept Zenodo — il pointe toujours vers la version la plus récente, inutile de le changer à chaque release."
   ]
 }
