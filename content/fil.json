@@ -3,12 +3,28 @@
   "entrees": [
     {
       "date": "2026-09-06",
+      "type": "lecture",
+      "titre": "The homogenizing effect of large language models on human expression and thought",
+      "source": "Sourati, Z., S Ziabari, A., & Dehghani, M. (2026). Trends in Cognitive Sciences, 30(9), 805-816",
+      "url": "https://doi.org/10.1016/j.tics.2026.01.003",
+      "commentaire": "Cette synthèse met des mots sur une intuition que je peine encore à formuler autrement que comme une hypothèse : les modèles de langage ne standardisent peut-être pas seulement les formes d'expression, mais aussi les manières de raisonner, en privilégiant et en renforçant les stratégies les plus représentées dans leurs données d'entraînement. L'argument est surtout développé ici à partir de la langue et de la créativité. Sa transposition au jugement clinique doit donc rester prudente, d'autant que les logiques de standardisation du raisonnement en santé précèdent largement l'intelligence artificielle. Mais le mécanisme décrit mérite l'attention : lorsque des individus différents s'appuient sur les mêmes modèles pour penser, formuler ou résoudre un problème, une forme de convergence peut progressivement apparaître. C'est précisément l'un des mécanismes que j'essaie d'interroger à travers la notion d'autorité cognitive automatisée.",
+      "tags": [
+        "IA",
+        "épistémologie",
+        "diversité cognitive"
+      ]
+    },
+    {
+      "date": "2026-09-06",
       "type": "production",
       "titre": "Registre des théories infirmières, version 0.1.0",
       "source": "Registre — 221 cadres théoriques",
       "url": "/theories/",
       "commentaire": "Premier état d'un recensement que je n'ai trouvé nulle part en francophonie. L'exercice a rendu visible ce que je cherchais sans le savoir : la discipline n'a produit que deux cadres théoriques sur la technologie, dont un antérieur aux systèmes prédictifs.",
-      "tags": ["théorie infirmière", "épistémologie"]
+      "tags": [
+        "théorie infirmière",
+        "épistémologie"
+      ]
     },
     {
       "date": "2026-08-28",
@@ -17,7 +33,10 @@
       "source": "Communication orale, Conférence de l'ALASS, Université de Montréal",
       "url": "",
       "commentaire": "Présentation du protocole doctoral. Le point de discussion le plus vif a porté sur la place de la médiation numérique dans le modèle de Tanner — absente de ses quatre phases, alors qu'elle conditionne aujourd'hui le remarquer.",
-      "tags": ["jugement clinique", "protocole"]
+      "tags": [
+        "jugement clinique",
+        "protocole"
+      ]
     },
     {
       "date": "2025-11-15",
@@ -26,7 +45,10 @@
       "source": "Poster, 2ᵉ Congrès de pédagogie en santé de l'océan Indien, Saint-Leu",
       "url": "",
       "commentaire": "Le format narratif comme dispositif pédagogique plutôt que comme support de diffusion : l'hypothèse est que le récit fait travailler le jugement là où le cours magistral transmet des critères.",
-      "tags": ["pédagogie", "médiation"]
+      "tags": [
+        "pédagogie",
+        "médiation"
+      ]
     }
   ]
 }

@@ -1,0 +1,204 @@
+{
+  "_mode_emploi": "Le socle : les textes qui structurent la pensée, par opposition au fil qui enregistre le flux des lectures. Contrainte volontaire : une trentaine de références au maximum, sinon ce n'est plus une sélection. La note dit ce que le texte déplace, pas ce qu'il contient — c'est elle qui fait la valeur de la page, et elle doit être réécrite à la première personne. Les notes livrées ici sont des amorces descriptives, à remplacer. Champ 'reference' : référence complète. Champ 'doi' : URL complète ou vide. Champ 'incomplet' : true si la référence reste à vérifier — un liseré d'avertissement s'affiche alors.",
+  "intro": "Ce que je lis n'a pas le même poids selon les textes. Le fil enregistre le flux ; cette page retient ce qui tient. Une trentaine de références, pas davantage, organisées par ce qu'elles font à ma pensée plutôt que par discipline d'origine.",
+  "sections": [
+    {
+      "titre": "Socle philosophique",
+      "chapeau": "Les textes qui fournissent l'outillage, en amont de la discipline infirmière.",
+      "oeuvres": [
+        {
+          "reference": "Foucault, M. (2008). L'archéologie du savoir. Gallimard.",
+          "doi": "",
+          "note": "L'idée qu'un savoir est structuré par des règles de formation qui décident de ce qui peut être dit — et par là de ce qui peut être su. C'est l'outil qui permet de traiter une typologie infirmière comme un objet historique plutôt que comme une description neutre.",
+          "incomplet": false
+        },
+        {
+          "reference": "Foucault, M. (2020). Power/Knowledge. Dans S. Seidman & J. C. Alexander (dir.), The New Social Theory Reader (2ᵉ éd., p. 73-79). Routledge.",
+          "doi": "https://doi.org/10.4324/9781003060963-10",
+          "note": "La formulation courte du couple savoir-pouvoir : le savoir n'est pas ce que le pouvoir censure, il est ce que le pouvoir produit. Déplacement décisif pour penser les dispositifs numériques autrement que comme des instruments neutres.",
+          "incomplet": false
+        },
+        {
+          "reference": "Canguilhem, G. (1966). Le normal et le pathologique. Presses universitaires de France.",
+          "doi": "",
+          "note": "La norme n'est pas dans les données, elle est posée par le vivant en situation. Argument central contre l'idée qu'un seuil d'alerte ou un score prédictif dirait quelque chose du patient indépendamment de la situation qui les interprète.",
+          "incomplet": false
+        },
+        {
+          "reference": "Beauchamp, T. L., & Childress, J. F. (2019). Principles of biomedical ethics (8ᵉ éd.). Oxford University Press.",
+          "doi": "",
+          "note": "Le principisme comme grammaire commune de la bioéthique — et comme objet de discussion : sa force est de rendre la délibération partageable, sa limite est de présupposer un sujet moral autonome et acontextuel que les situations de soin démentent souvent.",
+          "incomplet": false
+        }
+      ]
+    },
+    {
+      "titre": "Épistémologie du soin et décolonialité",
+      "chapeau": "Quels savoirs une discipline reconnaît-elle comme savoirs, et depuis quel lieu.",
+      "oeuvres": [
+        {
+          "reference": "Cleofas, J. V. (2024). Building a Pluriverse of Nursologies: A paradigm for decolonial theory and knowledge development in nursing. Nursing Philosophy, 25(4), e12497.",
+          "doi": "https://doi.org/10.1111/nup.12497",
+          "note": "La critique décoloniale du métaparadigme de Fawcett comme « épistémologie pyramidale » : hiérarchiser les théories par degré d'abstraction n'est pas un geste technique mais une opération de pouvoir épistémique. Le texte met en cause le principe même d'un registre organisé comme le mien.",
+          "incomplet": false
+        },
+        {
+          "reference": "Cleofas, J. V. (2025). Situating Filipino nursologies in the pluriverse of nursing knowledge: Narsolohiyang Pilipino as a decolonial project in nursing. Nursing Philosophy, 26(3), e70033.",
+          "doi": "https://doi.org/10.1111/nup.70033",
+          "note": "L'opérationnalisation du paradigme précédent : deux mouvements, pagbaklas (démonter) et pag-ugnay (relier), et un exemplaire par le concept de pakikiramdam. Le modèle intéresse directement la question d'une conceptualisation infirmière située à La Réunion.",
+          "incomplet": false
+        },
+        {
+          "reference": "Martinez, R. C. K. (2024). Nursing-situation-as-caring-moment (NurCaM): A Filipino value-grounded theory of nursing.",
+          "doi": "",
+          "note": "Une théorie du soin ancrée dans des valeurs philippines, qui montre qu'une nursologie située peut prendre une forme théorique aboutie et pas seulement programmatique.",
+          "incomplet": true
+        },
+        {
+          "reference": "Woldegiorgis, E. T. (2025). Hybrid knowledge systems: An alternative pathway to decolonising higher education in Africa. Comparative Education, 61(3), 354-372.",
+          "doi": "https://doi.org/10.1080/03050068.2025.2463805",
+          "note": "L'hybridation plutôt que la substitution : décoloniser ne consiste pas à remplacer un système de savoirs par un autre mais à tenir leur coexistence. Réponse possible à l'objection d'essentialisme adressée aux approches décoloniales.",
+          "incomplet": false
+        },
+        {
+          "reference": "Gabbay, J., & Le May, A. (2022). What (and why) are mindlines? Dans A. Le May & J. Gabbay, Knowledge Transformation in Health and Social Care (1ʳᵉ éd., p. 9-21). Routledge.",
+          "doi": "https://doi.org/10.4324/9781003158721-2",
+          "note": "Les mindlines : ce que les cliniciens utilisent réellement pour décider, des savoirs collectifs, tacites et négociés, très éloignés des recommandations formelles. Le décalage entre savoir prescrit et savoir mobilisé est le terrain où se joue la médiation numérique.",
+          "incomplet": false
+        },
+        {
+          "reference": "Racine, L., & Vandenberg, H. (2021). A philosophical analysis of anti-intellectualism in nursing: Newman's view of a university education. Nursing Philosophy, 22(3), e12361.",
+          "doi": "https://doi.org/10.1111/nup.12361",
+          "note": "L'anti-intellectualisme comme trait structurel de la profession, pas comme accident. Utile pour comprendre la faible circulation de la théorie infirmière dans les milieux de pratique francophones.",
+          "incomplet": false
+        }
+      ]
+    },
+    {
+      "titre": "Numérique critique, IA et jugement clinique",
+      "chapeau": "Comment les dispositifs redistribuent la crédibilité épistémique dans la situation de soin.",
+      "oeuvres": [
+        {
+          "reference": "Barnard, A. (2002). Philosophy of technology and nursing. Nursing Philosophy, 3(1), 15-26.",
+          "doi": "https://doi.org/10.1046/j.1466-769X.2002.00078.x",
+          "note": "L'un des deux seuls cadres théoriques que la discipline ait produits sur la technologie, et il est antérieur aux systèmes prédictifs. Ce vide théorique est le point de départ de mon travail.",
+          "incomplet": false
+        },
+        {
+          "reference": "Berg, M. (1997). Problems and promises of the protocol. Social Science & Medicine, 44(8), 1081-1088.",
+          "doi": "https://doi.org/10.1016/S0277-9536(96)00235-3",
+          "note": "Le protocole ne remplace pas le jugement, il le reconfigure — et cette reconfiguration a une histoire antérieure de trente ans à l'IA. Rappel salutaire contre l'illusion que la standardisation du raisonnement commence avec les algorithmes.",
+          "incomplet": false
+        },
+        {
+          "reference": "Topaz, M., Peltonen, L. M., Zhang, Z., & Backonja, U. (2026). The deskilling effect: Is artificial intelligence eroding clinical competence? Annals of Internal Medicine.",
+          "doi": "https://doi.org/10.7326/ANNALS-26-00613",
+          "note": "Pose la question de l'érosion des compétences cliniques par l'usage prolongé de l'IA. À lire pour ce qu'elle établit et pour ce qu'elle suppose : la compétence y est traitée comme une capacité individuelle mesurable, ce qui est déjà une décision théorique.",
+          "incomplet": false
+        },
+        {
+          "reference": "Sourati, Z., S Ziabari, A., & Dehghani, M. (2026). The homogenizing effect of large language models on human expression and thought. Trends in Cognitive Sciences, 30(9), 805-816.",
+          "doi": "https://doi.org/10.1016/j.tics.2026.01.003",
+          "note": "La convergence produite par le simple fait que tout le monde interroge les mêmes modèles. Synthèse d'arguments convergents plus que démonstration causale — utilisable comme point d'appui, risquée comme autorité.",
+          "incomplet": false
+        },
+        {
+          "reference": "Peters, U., & Chin-Yee, B. (2025). Generalization bias in large language model summarization of scientific research. Royal Society Open Science.",
+          "doi": "https://doi.org/10.1098/rsos.241776",
+          "note": "Les modèles généralisent au-delà de ce que les études affirment, en résumant. Effet directement pertinent pour la littératie scientifique des soignants, qui accèdent de plus en plus à la recherche par des résumés générés.",
+          "incomplet": false
+        },
+        {
+          "reference": "Qazi, I. A., Ali, A., Khawaja, A. U., Akhtar, M. J., Sheikh, A. Z., & Alizai, M. H. (2025). Automation bias in large language model assisted diagnostic reasoning among AI-trained physicians. [Prépublication].",
+          "doi": "https://doi.org/10.1101/2025.08.23.25334280",
+          "note": "Le biais d'automatisation persiste chez des médecins formés à l'IA — donc la formation ne suffit pas à l'immuniser. Prépublication non évaluée par les pairs : à citer avec cette réserve explicite.",
+          "incomplet": false
+        },
+        {
+          "reference": "Ibrahim, L., Hafner, F. S., & Rocher, L. (2026). Training language models to be warm can reduce accuracy and increase sycophancy. Nature, 652(8112), 1159-1165.",
+          "doi": "https://doi.org/10.1038/s41586-026-10410-0",
+          "note": "La chaleur relationnelle d'un modèle se paie en exactitude et en complaisance. Résultat troublant pour toute perspective de dispositif conversationnel en santé, où l'on attend précisément les deux.",
+          "incomplet": false
+        },
+        {
+          "reference": "Ahmed, S. A. (2026). Algorithmic dependence and digital colonialism: A conceptual framework for artificial intelligence in education and knowledge systems of the Global South. Frontiers in Education, 11, 1720563.",
+          "doi": "https://doi.org/10.3389/feduc.2026.1720563",
+          "note": "Articule dépendance algorithmique et colonialité numérique. Le cadre est pensé pour l'éducation, mais son transfert vers les systèmes de santé ultramarins est direct.",
+          "incomplet": false
+        },
+        {
+          "reference": "Hoffarth, M. (2026). Reimagining critical thinking in the age of AI: Implications for nursing education and practice. Nurse Education Today, 162, 107076.",
+          "doi": "https://doi.org/10.1016/j.nedt.2026.107076",
+          "note": "Que devient la pensée critique infirmière quand une part du raisonnement est déléguée. Question pédagogique autant qu'épistémologique.",
+          "incomplet": false
+        },
+        {
+          "reference": "Capraro, V. (s. d.). LLMorphism: When humans come to see themselves as language models.",
+          "doi": "",
+          "note": "Le retournement du raisonnement habituel : non plus l'anthropomorphisation des modèles, mais l'inverse — des humains qui en viennent à se concevoir eux-mêmes sur le modèle de la machine.",
+          "incomplet": true
+        },
+        {
+          "reference": "Raoul, A. (s. d.). L'émergence de l'IA conversationnelle comme autorité cognitive : perspectives éducatives et éthiques à l'ère de Grok.",
+          "doi": "",
+          "note": "Formulation francophone du déplacement de l'autorité cognitive vers les agents conversationnels.",
+          "incomplet": true
+        }
+      ]
+    },
+    {
+      "titre": "Résistance et politique de la discipline",
+      "chapeau": "Ce que la discipline fait de ses marges, et ce que ses marges lui font.",
+      "oeuvres": [
+        {
+          "reference": "Holmes, D., & Bender, M. (2025). Practices of resistance and nursing. Nursing Philosophy, 26(1), e70010.",
+          "doi": "https://doi.org/10.1111/nup.70010",
+          "note": "L'éditorial qui ouvre le numéro spécial d'où sort une part du corpus décolonial récent. Pose la résistance comme catégorie d'analyse disciplinaire plutôt que comme posture militante.",
+          "incomplet": false
+        },
+        {
+          "reference": "Martin, P., & Laurin, A. (2025). To our nurse friends: An ode to resistance. Nursing Philosophy, 26(1), e70006.",
+          "doi": "https://doi.org/10.1111/nup.70006",
+          "note": "Un texte francophone dans un registre inhabituel pour la revue. Intéressant autant par sa forme que par son propos : la question du genre d'écriture que la discipline autorise.",
+          "incomplet": false
+        },
+        {
+          "reference": "Smith, J. B. (2026). Staying with the trouble in nursing 12.5 hours at a time. Nursing Philosophy, 27(1), e70060.",
+          "doi": "https://doi.org/10.1111/nup.70060",
+          "note": "Reprise de Haraway appliquée au quart de travail : rester dans le trouble plutôt que le résoudre. Manière de tenir ensemble la critique et la pratique sans que la première disqualifie la seconde.",
+          "incomplet": false
+        }
+      ]
+    },
+    {
+      "titre": "Pédagogie et critique de l'approche par compétences",
+      "chapeau": "Ce que la forme des programmes fait au savoir qu'ils transmettent.",
+      "oeuvres": [
+        {
+          "reference": "Maykut, C., Reisdorfer, E., Ben-Ahmed, H. E., Martinez, R. C. K., Miller, K., & Kempfer, S. S. (2024). Investigating the fundamental levels of a signature pedagogy in nursing education: A scoping review. Nurse Education Today, 134, 106088.",
+          "doi": "https://doi.org/10.1016/j.nedt.2023.106088",
+          "note": "Y a-t-il une pédagogie propre aux sciences infirmières, et à quoi se reconnaîtrait-elle. La question de la signature pédagogique engage l'identité disciplinaire autant que la formation.",
+          "incomplet": false
+        },
+        {
+          "reference": "Lombarts, M. J. M. H. (2015). Competence-based education misses the essence of the medical profession. Perspectives on Medical Education, 4(6), 326-328.",
+          "doi": "https://doi.org/10.1007/s40037-015-0233-5",
+          "note": "La critique interne, venue du champ médical : découper la profession en compétences observables en manque le cœur. Argument transposable, mais à ne pas transposer sans examen — les deux professions n'ont pas le même rapport à la prescription.",
+          "incomplet": false
+        },
+        {
+          "reference": "Hirtt, N. (s. d.). L'approche par compétences : une mystification pédagogique.",
+          "doi": "",
+          "note": "La critique politique de l'approche par compétences : elle prépare à l'employabilité plutôt qu'au savoir. Position tranchée, à mobiliser comme thèse à discuter et non comme constat.",
+          "incomplet": true
+        },
+        {
+          "reference": "Grant, P. J. (s. d.). The incapacitating effects of competence: A critique.",
+          "doi": "",
+          "note": "La compétence comme catégorie qui incapacite ce qu'elle prétend décrire.",
+          "incomplet": true
+        }
+      ]
+    }
+  ]
+}

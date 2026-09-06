@@ -5,7 +5,7 @@
     "nom": "Yohan Mauve",
     "titre": "Infirmier, doctorant en sciences infirmières",
     "orcid": "0009-0006-6179-4782",
-    "courriel_perso": "yohan.mauve.1@ulaval.ca",
+    "courriel_perso": "contact@yomauve.re",
     "courriel_registre": "contact@yomauve.re"
   },
   "liens": {
@@ -17,7 +17,7 @@
   "registre": {
     "titre": "Registre des théories infirmières",
     "sousTitre": "Répertoire francophone des cadres théoriques de la discipline infirmière",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "date": "2026-09-06",
     "doi": "10.5281/zenodo.22549104",
     "licence": "CC BY 4.0",

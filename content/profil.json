@@ -2,56 +2,150 @@
   "eyebrow": "Sciences infirmières · épistémologie du soin",
   "prenom": "Yohan",
   "nom": "Mauve",
-  "tagline": "Comprendre comment les machines décident de ce qui compte comme savoir dans le soin.",
+  "tagline": "Comprendre comment les technologies numériques redéfinissent ce qui compte comme savoir dans le soin.",
   "taglineItalique": "Et rendre visibles les savoirs qu'elles laissent hors champ.",
   "photo": "portrait.jpg",
   "creds": [
-    { "texte": "Inf.", "fort": false },
-    { "texte": "M2", "fort": false },
-    { "texte": "Doctorant", "fort": false },
-    { "texte": "Université Laval", "fort": true },
-    { "texte": "La Réunion", "fort": false }
+    {
+      "texte": "Infirmier",
+      "fort": false
+    },
+    {
+      "texte": "Doctorant en sciences infirmières",
+      "fort": false
+    },
+    {
+      "texte": "Université Laval",
+      "fort": true
+    },
+    {
+      "texte": "Québec ⚜️",
+      "fort": false
+    },
+    {
+      "texte": "La Réunion 🇷🇪",
+      "fort": false
+    }
   ],
   "reperes": [
-    { "valeur": "221", "suffixe": "", "libelle": "théories recensées" },
-    { "valeur": "11", "suffixe": "ans", "libelle": "d'exercice infirmier" },
-    { "valeur": "2", "suffixe": "", "libelle": "projets lauréats" },
-    { "valeur": "2", "suffixe": "", "libelle": "hémisphères de travail" }
+    {
+      "valeur": "223",
+      "suffixe": "",
+      "libelle": "théories recensées"
+    },
+    {
+      "valeur": "11",
+      "suffixe": "ans",
+      "libelle": "d'exercice infirmier"
+    },
+    {
+      "valeur": "2",
+      "suffixe": "",
+      "libelle": "projets lauréats"
+    },
+    {
+      "valeur": "2",
+      "suffixe": "",
+      "libelle": "hémisphères de travail"
+    }
   ],
   "portes": [
-    { "num": "01", "titre": "Recherche", "titreItalique": "", "texte": "Thèse en sciences infirmières sur le pluralisme des savoirs dans les environnements cliniques numérisés.", "lien": "#recherche" },
-    { "num": "02", "titre": "Registre", "titreItalique": "", "texte": "Répertoire francophone des théories infirmières : 221 cadres classés, mis à jour chaque mois.", "lien": "/theories/" },
-    { "num": "03", "titre": "Médiation", "titreItalique": "", "texte": "Podcast, vidéo, carrousels : rendre la pensée infirmière lisible hors des revues.", "lien": "/fil/" }
+    {
+      "num": "01",
+      "titre": "Recherche",
+      "titreItalique": "",
+      "texte": "Thèse en sciences infirmières sur le pluralisme des savoirs dans les environnements cliniques numérisés.",
+      "lien": "#recherche"
+    },
+    {
+      "num": "02",
+      "titre": "Registre",
+      "titreItalique": "",
+      "texte": "Répertoire francophone des théories infirmières : 223 cadres classés, mis à jour chaque mois.",
+      "lien": "/theories/"
+    },
+    {
+      "num": "03",
+      "titre": "Médiation",
+      "titreItalique": "",
+      "texte": "Podcast, vidéo, carrousels : rendre la pensée infirmière lisible hors des revues.",
+      "lien": "/fil/"
+    }
   ],
   "trajectoire": {
     "titre": "Du bloc opératoire",
     "titreItalique": "à la théorie",
     "paragraphes": [
-      "J'ai commencé le soin par le bas, comme aide-soignant au bloc des urgences en 2010. Infirmier en 2015, j'ai exercé en Guyane puis à La Réunion, dont sept ans en soins intensifs et en neuroréanimation — là où la décision se prend vite, avec des appareils qui parlent plus fort que les patients.",
-      "C'est de là que vient ma question de recherche. En réanimation, les dispositifs numériques ne se contentent pas d'informer le jugement clinique : ils décident de ce qui mérite d'être remarqué. Ma thèse, à l'Université Laval sous la direction de Maxime Sasseville et Marie-Pierre Gagnon, en fait un objet théorique sous le nom d'autorité cognitive automatisée — la tendance à accorder une crédibilité épistémique accrue à ce que produit l'algorithme.",
-      "Ce travail s'est élargi à une question plus ancienne, que La Réunion pose avec insistance : quels savoirs une discipline reconnaît-elle comme savoirs ? Le patient qui consulte un médecin le matin et un tisaneur l'après-midi connaît un système que le soignant ne voit qu'à moitié. Les typologies infirmières des modes de connaître, construites en Europe et en Amérique du Nord, n'ont pas de place pour cette moitié-là.",
-      "J'enseigne les sciences infirmières et la bioéthique à l'Université de La Réunion, ainsi que la recherche à l'Institut en santé de La Réunion. Je coordonne l'Espace de réflexion éthique régional et je siège au comité scientifique et éthique de la recherche du CHU."
+      "J'ai commencé le soin comme aide-soignant aux urgences en 2010. Devenu infirmier en 2015, j'ai exercé en Guyane puis à La Réunion, dont sept années en soins intensifs et en neuroréanimation — des lieux où la décision se prend vite, au milieu de dispositifs qui produisent en permanence des données, des alertes et des interprétations du patient.",
+      "C'est de cette expérience qu'est née ma question de recherche. En réanimation, les technologies numériques ne se contentent pas d'informer le jugement clinique : elles contribuent aussi à définir ce qui devient visible ou crédible dans la situation de soin. Ma thèse, menée à l'Université Laval sous la direction du Pr Maxime Sasseville et de la Pre Marie-Pierre Gagnon, interroge notamment ce phénomène à travers la notion d'autorité cognitive : la tendance à accorder une crédibilité épistémique accrue aux informations et recommandations produites par les systèmes numériques et algorithmiques.",
+      "Cette réflexion m'a progressivement conduit vers une question plus large, et plus ancienne : quels savoirs une discipline reconnaît-elle comme des savoirs ? À La Réunion, cette question prend une forme particulièrement concrète. Un patient peut consulter un médecin le matin et un tisaneur l'après-midi, sans nécessairement percevoir de contradiction entre ces deux univers. Il articule alors plusieurs systèmes de savoirs que les catégories professionnelles ou académiques ne rendent pas toujours visibles.",
+      "Les sciences infirmières ont beaucoup travaillé sur les différentes manières de connaître. Mais leurs principales typologies ont été élaborées dans des contextes nord-américains et européens. Mon intérêt porte aussi sur ce qu'elles laissent hors champ : les savoirs situés, culturels, traditionnels ou relationnels qui participent pourtant pleinement au soin.",
+      "J'enseigne les sciences infirmières et la bioéthique à l'Université de La Réunion, ainsi que la recherche à l'Institut en santé de La Réunion. Je coordonne également l'Espace de réflexion éthique régional et siège au comité scientifique et éthique de la recherche du CHU de La Réunion."
     ]
   },
   "axes": [
-    { "titre": "Épistémologie du soin", "detail": "Modes de connaître infirmiers, savoirs profanes et traditionnels, injustice épistémique, pluralisme des savoirs." },
-    { "titre": "Numérique critique et IA", "detail": "Autorité cognitive automatisée, médiation algorithmique du jugement clinique, gouvernementalité algorithmique." },
-    { "titre": "Littératie critique", "detail": "Recherche d'information en santé, désinformation, littératie scientifique et littératie de l'IA chez les soignants et les citoyens." },
-    { "titre": "Bioéthique", "detail": "Éthique du soin, délibération collective, éthique de la recherche, enjeux éthiques du numérique en santé." }
+    {
+      "titre": "Épistémologie du soin",
+      "detail": "Modes de connaître en sciences infirmières, savoirs expérientiels, profanes et traditionnels, pluralisme épistémique et injustices épistémiques dans les situations de soin."
+    },
+    {
+      "titre": "Numérique critique et intelligence artificielle",
+      "detail": "Autorité cognitive automatisée, médiation algorithmique du jugement clinique, transformations des savoirs professionnels et gouvernementalité algorithmique en santé."
+    },
+    {
+      "titre": "Littératies critiques",
+      "detail": "Recherche et évaluation de l'information en santé, désinformation, littératie scientifique, littératie numérique et littératie de l'intelligence artificielle chez les professionnels et les citoyens."
+    },
+    {
+      "titre": "Bioéthique",
+      "detail": "Éthique du soin, délibération collective, éthique de la recherche et enjeux éthiques, sociaux et épistémiques du numérique en santé."
+    }
   ],
   "distinctions": [
-    { "annee": 2025, "intitule": "Lauréat de l'appel à projet du Fonds de dotation du CHU de La Réunion", "detail": "Porteur de « Nout' tout in parol », premier podcast santé en créole réunionnais donnant la parole aux personnes atteintes de maladies rares." },
-    { "annee": 2024, "intitule": "Lauréat de l'appel à projet de la Fondation Maladies rares", "detail": "Porteur d'e-ETP-OI, plateforme d'éducation thérapeutique numérique pour les personnes atteintes de maladies rares dans l'océan Indien." }
+    {
+      "annee": 2025,
+      "intitule": "Lauréat de l'appel à projet du Fonds de dotation du CHU de La Réunion",
+      "detail": "Porteur de « Nout' tout in parol », premier podcast santé en créole réunionnais donnant la parole aux personnes atteintes de maladies rares."
+    },
+    {
+      "annee": 2024,
+      "intitule": "Lauréat de l'appel à projet de la Fondation Maladies rares",
+      "detail": "Porteur d'e-ETP-OI, plateforme d'éducation thérapeutique numérique pour les personnes atteintes de maladies rares dans l'océan Indien."
+    }
   ],
   "affiliations": [
-    { "role": "Doctorant en sciences infirmières", "structure": "Université Laval, Québec" },
-    { "role": "Enseignant — sciences infirmières et bioéthique", "structure": "Université de La Réunion" },
-    { "role": "Enseignant — recherche", "structure": "Institut en santé de La Réunion (IES)" },
-    { "role": "Coordinateur", "structure": "Espace de réflexion éthique régional de La Réunion" },
-    { "role": "Membre du comité scientifique et éthique de la recherche", "structure": "CHU de La Réunion" },
-    { "role": "Membre du laboratoire", "structure": "Continuum Lab, Canada" },
-    { "role": "Membre étudiant", "structure": "VITAM — Centre de recherche en santé durable" },
-    { "role": "Membre étudiant", "structure": "OBVIA" }
+    {
+      "role": "Doctorant en sciences infirmières",
+      "structure": "Université Laval, Québec"
+    },
+    {
+      "role": "Enseignant — sciences infirmières et bioéthique",
+      "structure": "Université de La Réunion"
+    },
+    {
+      "role": "Enseignant — recherche",
+      "structure": "Institut en santé de La Réunion (IES)"
+    },
+    {
+      "role": "Coordinateur",
+      "structure": "Espace de réflexion éthique régional de La Réunion"
+    },
+    {
+      "role": "Membre du comité scientifique et éthique de la recherche",
+      "structure": "CHU de La Réunion"
+    },
+    {
+      "role": "Membre du laboratoire",
+      "structure": "Continuum Lab, Canada"
+    },
+    {
+      "role": "Membre étudiant",
+      "structure": "VITAM — Centre de recherche en santé durable"
+    },
+    {
+      "role": "Membre étudiant",
+      "structure": "OBVIA"
+    }
   ],
   "contact": {
     "accroche": "Une collaboration, une théorie absente du registre, une invitation à parler ?",

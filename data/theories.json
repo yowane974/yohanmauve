@@ -2650,5 +2650,29 @@
     "resume": "Expertise infirmière en transport aéromédical : maîtrise de l'environnement, anticipation, gestion de la rareté des ressources.",
     "lecture_critique": null,
     "hors_nursology": true
+  },
+  {
+    "id": 222,
+    "nom": "Pluriverse of Nursologies (PoN)",
+    "auteurs": "Jerome Visperas Cleofas",
+    "annee": 2024,
+    "niveau": "philosophie",
+    "niveau_code": "P",
+    "phenomene": "epis",
+    "resume": "Paradigme métathéorique décolonial : démonter l'« épistémologie pyramidale » du savoir infirmier — dont le métaparadigme de Fawcett est donné pour exemplaire — et replacer au centre du discours disciplinaire les nursologies issues des communautés marginalisées, sans les subordonner à un cadre englobant.",
+    "lecture_critique": "Entrée qui met en cause le classement dont elle relève : Cleofas soutient que hiérarchiser les théories par degré d'abstraction reconduit une épistémologie coloniale. La ranger au niveau « philosophie » de la taxonomie de Fawcett est donc un geste contestable, et assumé ici comme tel. Le paradigme reste par ailleurs programmatique : il indique une direction plus qu'il ne fournit d'appareil de théorisation.",
+    "hors_nursology": true
+  },
+  {
+    "id": 223,
+    "nom": "Narsolohiyang Pilipino",
+    "auteurs": "Jerome Visperas Cleofas",
+    "annee": 2025,
+    "niveau": "philosophie",
+    "niveau_code": "P",
+    "phenomene": "cul",
+    "resume": "Paradigme décolonial de théorisation infirmière ancré dans les épistémologies et les manières de vivre philippines, articulé autour de deux mouvements — pagbaklas (démonter) et pag-ugnay (relier) — et illustré par le concept de pakikiramdam, l'attunement relationnel.",
+    "lecture_critique": "Première formalisation d'une nursologie nationale explicitement décoloniale, opérationnalisant le Pluriverse of Nursologies. Sa portée hors du contexte philippin est indécidée : l'auteur la présente comme tentative, et l'exemplaire proposé reste unique. Le modèle intéresse néanmoins toute discipline cherchant à théoriser depuis une situation postcoloniale.",
+    "hors_nursology": true
   }
 ]

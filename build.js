@@ -20,6 +20,7 @@ const theories = read('data/theories.json');
 const profil = read('content/profil.json');
 const travaux = read('content/travaux.json');
 const fil = read('content/fil.json');
+const socleData = read('content/socle.json');
 
 function esc(s) {
   return String(s == null ? '' : s)
@@ -71,6 +72,7 @@ ${FONTS}
     <a href="${url('/')}"${current === 'accueil' ? ' aria-current="page"' : ''}>Accueil</a>
     <a href="${url('/fil/')}"${current === 'fil' ? ' aria-current="page"' : ''}>Fil</a>
     <a href="${url('/theories/')}"${current === 'theories' ? ' aria-current="page"' : ''}>Registre</a>
+    <a href="${url('/socle/')}"${current === 'socle' ? ' aria-current="page"' : ''}>Socle</a>
     <a href="${url('/contribuer/')}"${current === 'contribuer' ? ' aria-current="page"' : ''}>Contribuer</a>
     <a href="${url('/contact/')}"${current === 'contact' ? ' aria-current="page"' : ''}>Contact</a>
   </nav>
@@ -146,7 +148,8 @@ function accueil() {
   <div>
     <p class="eyebrow-rule">Projet en cours · registre francophone</p>
     <h2>Les théories que personne <i>n'indexe.</i></h2>
-    <p>Un recensement des cadres théoriques de la discipline infirmière, classés par degré d'abstraction et par phénomène. Il documente ce que les répertoires anglophones laissent de côté : les traditions nordique, francophone, brésilienne et asiatique. <b>Mise à jour chaque mois, chaque entrée validée à la main.</b></p>
+    <p>Un recensement des cadres théoriques en sciences infirmières, organisés selon leur niveau d'abstraction et les phénomènes qu'ils permettent d'éclairer. L'objectif est aussi de rendre visibles ce que les répertoires anglophones documentent peu ou mal : les traditions nordiques, francophones, brésiliennes, philippines et asiatiques.</p>
+    <p><b>Mise à jour mensuelle. Chaque entrée est vérifiée manuellement.</b></p>
     <a class="cta" href="${url('/theories/')}">Consulter le registre →</a>
   </div>
   <div class="chiffre">
@@ -378,6 +381,42 @@ function contribuer() {
   });
 }
 
+/* ---------- socle ---------- */
+function socle() {
+  const total = socleData.sections.reduce((n, s) => n + s.oeuvres.length, 0);
+  const corps = socleData.sections.map(s => `
+<section class="section"><div class="wrap">
+  <div class="duo">
+    <div>
+      <p class="eyebrow-rule">${esc(s.titre)}</p>
+      ${s.chapeau ? `<p class="chapeau">${esc(s.chapeau)}</p>` : ''}
+    </div>
+    <div><ul class="socle">
+      ${s.oeuvres.map(o => `<li${o.incomplet ? ' class="a-verifier"' : ''}>
+        <p class="ref">${esc(o.reference)}${o.doi ? ` <a class="doi" href="${esc(o.doi)}" rel="noopener">↗</a>` : ''}</p>
+        <p class="pourquoi">${esc(o.note)}</p>
+        ${o.incomplet ? '<p class="flag">Référence à compléter</p>' : ''}
+      </li>`).join('')}
+    </ul></div>
+  </div>
+</div></section>`).join('');
+
+  const body = `
+<header class="hero"><div class="wrap">
+  <p class="eyebrow">${total} textes · ${socleData.sections.length} entrées thématiques</p>
+  <h1>Le <i>socle</i></h1>
+  <p class="tagline">${esc(socleData.intro)}</p>
+</div></header>
+${corps}`;
+
+  return page({
+    title: 'Le socle',
+    description: 'Les textes qui structurent une pensée en sciences infirmières : épistémologie du soin, décolonialité, numérique critique, pédagogie.',
+    current: 'socle',
+    body
+  });
+}
+
 /* ---------- contact ---------- */
 function formulaire() {
   const f = cfg.formulaire || {};
@@ -483,6 +522,7 @@ write('index.html', accueil());
 write('fil/index.html', pageFil());
 write('theories/index.html', registre());
 write('contribuer/index.html', contribuer());
+write('socle/index.html', socle());
 write('contact/index.html', contact());
 write('contact/merci/index.html', merci());
 for (const ic of ['favicon.svg', 'favicon.ico', 'apple-touch-icon.png']) {
