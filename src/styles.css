@@ -244,3 +244,35 @@ footer .reseaux .sep{color:var(--rule)}
   .count{margin-left:0;width:100%}
   .affils .struct{margin-left:0}
 }
+
+/* ---------- formulaire de contact ---------- */
+.adresse{font-family:var(--mono);font-size:13px;letter-spacing:.04em;margin-top:26px;line-height:2}
+.note-inline{font-size:15px;color:var(--encre-2);max-width:42ch;margin-top:28px}
+.cta{margin-top:22px}
+.contact .cta a{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--prune-clair);text-decoration:none;border-bottom:1px solid var(--prune-clair);padding-bottom:4px}
+
+.form{max-width:44rem}
+.form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+.field{margin:0 0 22px;display:flex;flex-direction:column}
+.field label{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--encre-3);margin-bottom:8px}
+.field .req{color:var(--prune)}
+.field input,.field select,.field textarea{
+  font-family:var(--sans);font-size:16px;color:var(--encre);
+  background:var(--creme);border:0;border-bottom:1px solid var(--rule);
+  padding:9px 2px;border-radius:0;-webkit-appearance:none;appearance:none;width:100%;box-sizing:border-box;
+  transition:border-color .18s ease}
+.field textarea{resize:vertical;line-height:1.55;min-height:120px}
+.field select{background-image:linear-gradient(45deg,transparent 50%,var(--prune) 50%),linear-gradient(135deg,var(--prune) 50%,transparent 50%);
+  background-position:calc(100% - 12px) 18px,calc(100% - 7px) 18px;background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:28px}
+.field input:hover,.field select:hover,.field textarea:hover{border-bottom-color:var(--encre-3)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--prune);border-bottom-width:2px;padding-bottom:8px}
+.form-foot{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:8px}
+.form-foot button{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--prune);color:var(--creme);border:1px solid var(--prune);
+  padding:14px 30px;cursor:pointer;transition:background .18s ease,color .18s ease}
+.form-foot button:hover{background:transparent;color:var(--prune)}
+.form-foot .hint{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--encre-3)}
+.legal{font-size:13px;line-height:1.65;color:var(--encre-3);max-width:56ch;margin-top:30px;padding-top:18px;border-top:1px solid var(--rule)}
+@media (max-width:720px){.field-row{grid-template-columns:1fr}}

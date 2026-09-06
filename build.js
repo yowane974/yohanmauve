@@ -58,6 +58,10 @@ function page({ title, description, current, body }) {
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:type" content="website">
 ${FONTS}
+<link rel="icon" href="${url('/favicon.svg')}" type="image/svg+xml">
+<link rel="alternate icon" href="${url('/favicon.ico')}" sizes="any">
+<link rel="apple-touch-icon" href="${url('/apple-touch-icon.png')}">
+<meta name="theme-color" content="#6E2E5B">
 <link rel="stylesheet" href="${url('/styles.css')}">
 </head>
 <body>
@@ -68,6 +72,7 @@ ${FONTS}
     <a href="${url('/fil/')}"${current === 'fil' ? ' aria-current="page"' : ''}>Fil</a>
     <a href="${url('/theories/')}"${current === 'theories' ? ' aria-current="page"' : ''}>Registre</a>
     <a href="${url('/contribuer/')}"${current === 'contribuer' ? ' aria-current="page"' : ''}>Contribuer</a>
+    <a href="${url('/contact/')}"${current === 'contact' ? ' aria-current="page"' : ''}>Contact</a>
   </nav>
 </div></div>
 ${body}
@@ -208,6 +213,7 @@ ${(profil.distinctions || []).length ? `<section class="section alt"><div class=
   <h2>Contact<span class="dot">.</span></h2>
   <p>${esc(profil.contact.accroche)}</p>
   <p class="adresse"><a href="mailto:${esc(cfg.auteur.courriel_perso)}">${esc(cfg.auteur.courriel_perso)}</a><br>${esc(profil.contact.lieu)}</p>
+  <p class="cta"><a href="${url('/contact/')}">Passer par le formulaire</a></p>
 </div></section>`;
 
   return page({
@@ -372,6 +378,97 @@ function contribuer() {
   });
 }
 
+/* ---------- contact ---------- */
+function formulaire() {
+  const f = cfg.formulaire || {};
+  const mail = cfg.auteur.courriel_registre || cfg.auteur.courriel_perso;
+  if (!f.web3formsKey) {
+    return `<div class="callout">
+      <p><b>Formulaire en attente de sa clé.</b> Renseignez <code>formulaire.web3formsKey</code> dans <code>site.config.json</code> pour l'activer. En attendant, l'adresse ci-dessus reste la voie de contact.</p>
+    </div>`;
+  }
+  const motifs = (f.motifs || []).map(m => `<option>${esc(m)}</option>`).join('');
+  return `<form class="form" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="${esc(f.web3formsKey)}">
+  <input type="hidden" name="subject" value="Message depuis ${esc(cfg.domaine || 'le site')}">
+  <input type="hidden" name="from_name" value="${esc(cfg.domaine || 'Site')}">
+  <input type="hidden" name="redirect" value="https://${esc(cfg.domaine)}${url('/contact/merci/')}">
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <div class="field-row">
+    <p class="field"><label for="f-nom">Nom <span class="req">*</span></label>
+      <input id="f-nom" name="Nom" type="text" required autocomplete="name"></p>
+    <p class="field"><label for="f-mail">Courriel <span class="req">*</span></label>
+      <input id="f-mail" name="email" type="email" required autocomplete="email"></p>
+  </div>
+
+  <p class="field"><label for="f-org">Organisation</label>
+    <input id="f-org" name="Organisation" type="text" autocomplete="organization"></p>
+
+  <p class="field"><label for="f-motif">Motif <span class="req">*</span></label>
+    <select id="f-motif" name="Motif" required>
+      <option value="" selected disabled>Choisir…</option>
+      ${motifs}
+    </select></p>
+
+  <p class="field"><label for="f-msg">Message <span class="req">*</span></label>
+    <textarea id="f-msg" name="Message" rows="7" required></textarea></p>
+
+  <div class="form-foot">
+    <button type="submit">Envoyer</button>
+    ${f.delaiReponse ? `<span class="hint">${esc(f.delaiReponse)}</span>` : ''}
+  </div>
+  <p class="legal">Les champs de ce formulaire sont transmis par le service Web3Forms, qui les réexpédie à ${esc(mail)} sans les conserver durablement. Aucun traceur, aucune mesure d'audience sur ce site. Écrivez directement à cette adresse si vous préférez éviter l'intermédiaire.</p>
+</form>`;
+}
+
+function contact() {
+  const mail = cfg.auteur.courriel_registre || cfg.auteur.courriel_perso;
+  const body = `
+<header class="hero"><div class="wrap">
+  <p class="eyebrow">Écrire</p>
+  <h1>Contact<span class="dot">.</span></h1>
+  <p class="tagline">${esc(profil.contact.accroche)}<em>Une objection argumentée vaut mieux qu'un accord poli.</em></p>
+</div></header>
+
+<section class="section"><div class="wrap">
+  <div class="duo">
+    <div>
+      <p class="eyebrow-rule">Directement</p>
+      <h2>Par <i>courriel</i></h2>
+      <p class="adresse"><a href="mailto:${esc(mail)}">${esc(mail)}</a><br>${esc(profil.contact.lieu)}</p>
+      <p class="note-inline">Pour une théorie absente du registre, lisez d'abord <a href="${url('/contribuer/')}">ce qu'une proposition doit contenir</a> : c'est ce qui fait la différence entre un signalement traité et un signalement en attente.</p>
+    </div>
+    <div>${formulaire()}</div>
+  </div>
+</div></section>`;
+
+  return page({
+    title: 'Contact',
+    description: `Écrire à ${profil.prenom} ${profil.nom} — collaboration de recherche, intervention, encadrement, contribution au registre des théories infirmières.`,
+    current: 'contact',
+    body
+  });
+}
+
+function merci() {
+  const body = `
+<header class="hero"><div class="wrap">
+  <p class="eyebrow">Message reçu</p>
+  <h1>Merci<span class="dot">.</span></h1>
+  <p class="tagline">Votre message est arrivé.<em>${esc((cfg.formulaire || {}).delaiReponse || '')}</em></p>
+</div></header>
+
+<section class="section"><div class="wrap">
+  <div class="note" style="max-width:60ch">
+    <p>Chaque message est lu et traité à la main. Si votre envoi concerne une théorie à ajouter au registre, la réponse dira ce qui a été retenu, ce qui ne l'a pas été, et pourquoi.</p>
+    <p><a href="${url('/')}">Retour à l'accueil</a> · <a href="${url('/theories/')}">Le registre</a> · <a href="${url('/fil/')}">Le fil</a></p>
+  </div>
+</div></section>`;
+
+  return page({ title: 'Message envoyé', description: 'Confirmation d\'envoi.', current: 'contact', body });
+}
+
 /* ---------- écriture ---------- */
 function write(rel, content) {
   const full = path.join(DIST, rel);
@@ -386,6 +483,12 @@ write('index.html', accueil());
 write('fil/index.html', pageFil());
 write('theories/index.html', registre());
 write('contribuer/index.html', contribuer());
+write('contact/index.html', contact());
+write('contact/merci/index.html', merci());
+for (const ic of ['favicon.svg', 'favicon.ico', 'apple-touch-icon.png']) {
+  const src = path.join(ROOT, 'src', ic);
+  if (fs.existsSync(src)) { fs.copyFileSync(src, path.join(DIST, ic)); console.log('  ' + ic); }
+}
 write('styles.css', fs.readFileSync(path.join(ROOT, 'src/styles.css'), 'utf8'));
 write('registre.js', fs.readFileSync(path.join(ROOT, 'src/registre.js'), 'utf8'));
 write('data/theories.json', JSON.stringify(theories, null, 2));

@@ -6,7 +6,7 @@
     "titre": "Infirmier, doctorant en sciences infirmières",
     "orcid": "0009-0006-6179-4782",
     "courriel_perso": "yohan.mauve.1@ulaval.ca",
-    "courriel_registre": "yohan.mauve.1@ulaval.ca"
+    "courriel_registre": "contact@yomauve.re"
   },
   "liens": {
     "youtube": "https://www.youtube.com/@YoMauve974",
@@ -26,7 +26,19 @@
   "_notes": [
     "domaine : renseigner après achat, sans https:// ni barre oblique finale.",
     "baseUrl : vide, car le site est servi à la racine de yomauve.re. Ne le remplir (/nom-du-depot) que si le site repassait sur une URL github.io en sous-chemin.",
-    "courriel_registre : l'adresse dédiée aux contributions. Actuellement l'adresse étudiante Université Laval — à remplacer par une adresse au nom de domaine dès son achat, car une adresse institutionnelle étudiante est fermée à la fin du cursus et emporterait avec elle le seul point de contact du registre.",
-    "doi : DOI concept Zenodo — il pointe toujours vers la version la plus récente, inutile de le changer à chaque release."
-  ]
+    "doi : DOI concept Zenodo — il pointe toujours vers la version la plus récente, inutile de le changer à chaque release.",
+    "courriel_registre : contact@yomauve.re, adresse dédiée aux contributions, hébergée au nom de domaine — pérenne, indépendante du cursus.",
+    "formulaire.web3formsKey : clé d'accès Web3Forms (https://web3forms.com) associée à contact@yomauve.re. Tant qu'elle est vide, la page Contact affiche l'adresse courriel seule, sans formulaire — le site reste valide."
+  ],
+  "formulaire": {
+    "web3formsKey": "e7ffd743-3d59-475b-a15b-a0209f3e3de1",
+    "delaiReponse": "Réponse habituelle sous 5 à 7 jours ouvrés.",
+    "motifs": [
+      "Contribution au registre des théories",
+      "Collaboration de recherche",
+      "Intervention, conférence, formation",
+      "Encadrement, mémoire, thèse",
+      "Autre"
+    ]
+  }
 }
