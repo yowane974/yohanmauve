@@ -69,6 +69,30 @@ header.hero{padding:64px 0 44px}
 .works .st{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--rule);padding:1px 6px;border-radius:3px;margin-left:6px}
 .empty-note{font-family:var(--serif);font-style:italic;color:var(--ink-3);font-size:15px;margin:0}
 
+/* fil */
+.fil{display:grid;gap:0}
+.fil-item{display:grid;grid-template-columns:132px 1fr;gap:0 28px;padding:20px 0;border-bottom:1px solid var(--rule-soft)}
+.fil-item:last-child{border-bottom:0}
+.fil-item:first-child{padding-top:0}
+.fil-meta{display:flex;flex-direction:column;gap:4px;padding-top:3px}
+.fil-type{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:3px;align-self:start}
+.is-prod .fil-type{color:var(--accent);background:var(--accent-soft)}
+.is-lect .fil-type{color:var(--ink-3);border:1px solid var(--rule)}
+.fil-meta time{font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:.03em}
+.fil-body h3{font-family:var(--serif);font-size:1.12rem;font-weight:500;line-height:1.3;margin:0 0 4px}
+.fil-body h3 a{color:var(--ink);text-decoration:none;background-image:linear-gradient(var(--rule),var(--rule));background-size:100% 1px;background-repeat:no-repeat;background-position:0 100%}
+.fil-body h3 a:hover{background-image:linear-gradient(var(--accent),var(--accent))}
+.fil-src{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin:0 0 9px;letter-spacing:.02em}
+.fil-com{font-size:15px;color:var(--ink-2);margin:0;max-width:72ch}
+.fil-tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0}
+.fil-tags span{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--ink-3);border:1px solid var(--rule);border-radius:999px;padding:2px 9px}
+footer .reseaux{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline}
+footer .reseaux .sep{color:var(--ink-3)}
+@media (max-width:640px){
+  .fil-item{grid-template-columns:1fr;gap:8px}
+  .fil-meta{flex-direction:row;align-items:center;gap:10px}
+}
+
 /* teaser registre */
 .teaser{display:grid;gap:26px;grid-template-columns:1.4fr 1fr;align-items:start}
 @media (max-width:720px){.teaser{grid-template-columns:1fr}}

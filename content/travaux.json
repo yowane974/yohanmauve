@@ -1,13 +1,24 @@
 {
-  "_mode_emploi": "Une entrée par publication ou communication. Le champ type accepte : article, chapitre, communication, poster, rapport, autre. Le champ statut accepte : publie, accepte, soumis, en-preparation. Les entrées en-preparation ne sont pas affichées tant que afficher_travaux_en_cours vaut false dans build.js. Supprimez les exemples ci-dessous.",
+  "_mode_emploi": "Une entrée par publication ou communication. Le champ type accepte : article, chapitre, communication, poster, rapport, autre. Le champ statut accepte : publie, accepte, soumis, en-preparation. Les entrées en-preparation ne sont affichées que si afficher_travaux_en_cours vaut true dans build.js.",
   "publications": [
     {
       "type": "article",
+      "statut": "accepte",
+      "auteurs": "Mauve, Y., Gagnon, M.-P., & Sasseville, M.",
+      "annee": 2026,
+      "titre": "Autorité cognitive automatisée et pluralité des savoirs infirmiers : enjeux épistémologiques de l'intelligence artificielle générative dans la formation des infirmiers",
+      "support": "Revue à préciser",
+      "doi": "",
+      "url": "",
+      "acces_libre": false
+    },
+    {
+      "type": "article",
       "statut": "en-preparation",
-      "auteurs": "Mauve, Y.",
-      "annee": null,
-      "titre": "Exemple — remplacer par une référence réelle",
-      "support": "Nom de la revue",
+      "auteurs": "Yousefi, F., Gagnon, M.-P., Sasseville, M., Dehnavieh, R., Laberge, M., Naffi, N., Mauve, Y., & Naye, F.",
+      "annee": 2026,
+      "titre": "Artificial Intelligence (AI) Integration in Non-Medical Health Professions Education (HPE): Protocol for a Scoping Review",
+      "support": "Revue à préciser",
       "doi": "",
       "url": "",
       "acces_libre": false
@@ -17,10 +28,28 @@
     {
       "type": "communication",
       "statut": "publie",
-      "auteurs": "Mauve, Y.",
-      "annee": null,
-      "titre": "Exemple — remplacer par une communication réelle",
-      "support": "Nom du congrès, ville",
+      "auteurs": "Mauve, Y., Sasseville, M., & Gagnon, M.-P.",
+      "annee": 2026,
+      "titre": "Articuler les savoirs dans le jugement clinique infirmier en soins intensifs numérisés : protocole d'une théorisation ancrée constructiviste",
+      "support": "Communication orale, Conférence de l'ALASS, Université de Montréal, Québec, Canada (27-29 août)",
+      "url": ""
+    },
+    {
+      "type": "communication",
+      "statut": "publie",
+      "auteurs": "Yousefi, F., Gagnon, M.-P., Naffi, N., Sasseville, M., Nadali, M., Ahouehome, R., Adnane, F. A., Mauve, Y., & Naye, F.",
+      "annee": 2026,
+      "titre": "Mapping the Integration of Artificial Intelligence (AI) in Health Professions Education: A Scoping Review Protocol",
+      "support": "Résumé étendu, Canadian International Conference on Education (CICE 2026), 20 juillet",
+      "url": ""
+    },
+    {
+      "type": "poster",
+      "statut": "publie",
+      "auteurs": "Mauve, Y., Sasseville, M., & Gagnon, M.-P.",
+      "annee": 2025,
+      "titre": "De la littératie numérique à la praxis critique : un balado narratif pour développer la pensée critique infirmière",
+      "support": "Poster, 2ᵉ Congrès de pédagogie en santé de l'océan Indien, Saint-Leu, La Réunion (novembre)",
       "url": ""
     }
   ]

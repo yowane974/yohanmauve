@@ -1,0 +1,32 @@
+{
+  "_mode_emploi": "Le fil : ce que je lis et ce que je produis. Une entrée par élément. type : lecture (article, rapport, ouvrage) ou production (vidéo, podcast, communication, publication, carrousel). date au format AAAA-MM-JJ. Le commentaire est le cœur de l'entrée : il dit pourquoi cette lecture compte, pas ce qu'elle contient. Les entrées sont affichées de la plus récente à la plus ancienne ; les dix dernières sur la page d'accueil, toutes sur /fil/.",
+  "entrees": [
+    {
+      "date": "2026-09-06",
+      "type": "production",
+      "titre": "Registre des théories infirmières, version 0.1.0",
+      "source": "Registre — 221 cadres théoriques",
+      "url": "/theories/",
+      "commentaire": "Premier état d'un recensement que je n'ai trouvé nulle part en francophonie. L'exercice a rendu visible ce que je cherchais sans le savoir : la discipline n'a produit que deux cadres théoriques sur la technologie, dont un antérieur aux systèmes prédictifs.",
+      "tags": ["théorie infirmière", "épistémologie"]
+    },
+    {
+      "date": "2026-08-28",
+      "type": "production",
+      "titre": "Articuler les savoirs dans le jugement clinique infirmier en soins intensifs numérisés",
+      "source": "Communication orale, Conférence de l'ALASS, Université de Montréal",
+      "url": "",
+      "commentaire": "Présentation du protocole doctoral. Le point de discussion le plus vif a porté sur la place de la médiation numérique dans le modèle de Tanner — absente de ses quatre phases, alors qu'elle conditionne aujourd'hui le remarquer.",
+      "tags": ["jugement clinique", "protocole"]
+    },
+    {
+      "date": "2025-11-15",
+      "type": "production",
+      "titre": "De la littératie numérique à la praxis critique : un balado narratif pour développer la pensée critique infirmière",
+      "source": "Poster, 2ᵉ Congrès de pédagogie en santé de l'océan Indien, Saint-Leu",
+      "url": "",
+      "commentaire": "Le format narratif comme dispositif pédagogique plutôt que comme support de diffusion : l'hypothèse est que le récit fait travailler le jugement là où le cours magistral transmet des critères.",
+      "tags": ["pédagogie", "médiation"]
+    }
+  ]
+}

@@ -10,13 +10,49 @@ const ROOT = __dirname;
 const DIST = path.join(ROOT, 'dist');
 
 // Passe à true pour afficher les travaux dont le statut est "en-preparation".
-const afficher_travaux_en_cours = false;
+const afficher_travaux_en_cours = true;
 
 const cfg = read('site.config.json');
 const tax = read('data/taxonomies.json');
 const theories = read('data/theories.json');
 const profil = read('content/profil.json');
 const travaux = read('content/travaux.json');
+const fil = read('content/fil.json');
+
+const RESEAUX = [
+  { cle: 'youtube', label: 'YouTube' },
+  { cle: 'instagram', label: 'Instagram' },
+  { cle: 'linkedin', label: 'LinkedIn' },
+  { cle: 'googleScholar', label: 'Google Scholar' }
+];
+function liensReseaux() {
+  const l = (cfg.liens || {});
+  const actifs = RESEAUX.filter(r => l[r.cle]);
+  if (!actifs.length) return '';
+  return actifs.map(r => `<a href="${esc(l[r.cle])}" rel="me noopener">${r.label}</a>`).join('<span class="sep">·</span>');
+}
+
+const TYPE_FIL = { lecture: 'Lecture', production: 'Production' };
+function entreesFil(limite) {
+  const items = (fil.entrees || []).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
+  const liste = limite ? items.slice(0, limite) : items;
+  return liste.map(e => {
+    const d = new Date(e.date + 'T12:00:00');
+    const mois = d.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+    const titre = e.url
+      ? `<a href="${e.url.startsWith('/') ? url(e.url) : esc(e.url)}">${esc(e.titre)}</a>`
+      : esc(e.titre);
+    return `<article class="fil-item ${e.type === 'production' ? 'is-prod' : 'is-lect'}">
+      <div class="fil-meta"><span class="fil-type">${TYPE_FIL[e.type] || ''}</span><time datetime="${esc(e.date)}">${mois}</time></div>
+      <div class="fil-body">
+        <h3>${titre}</h3>
+        <p class="fil-src">${esc(e.source)}</p>
+        <p class="fil-com">${esc(e.commentaire)}</p>
+        ${(e.tags || []).length ? `<p class="fil-tags">${e.tags.map(t => `<span>${esc(t)}</span>`).join('')}</p>` : ''}
+      </div>
+    </article>`;
+  }).join('');
+}
 
 function read(p) { return JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8')); }
 function esc(s) {
@@ -52,6 +88,7 @@ ${FONTS}
   <a class="name" href="${url('/')}">${esc(cfg.auteur.nom)}</a>
   <nav>
     <a href="${url('/')}"${current === 'accueil' ? ' aria-current="page"' : ''}>Accueil</a>
+    <a href="${url('/fil/')}"${current === 'fil' ? ' aria-current="page"' : ''}>Fil</a>
     <a href="${url('/theories/')}"${current === 'theories' ? ' aria-current="page"' : ''}>Registre des théories</a>
     <a href="${url('/contribuer/')}"${current === 'contribuer' ? ' aria-current="page"' : ''}>Contribuer</a>
   </nav>
@@ -59,6 +96,7 @@ ${FONTS}
 ${body}
 <footer><div class="wrap">
   <p>${esc(cfg.auteur.nom)} — ${esc(cfg.auteur.titre)}${cfg.auteur.courriel_perso ? ` · <a href="mailto:${esc(cfg.auteur.courriel_perso)}">${esc(cfg.auteur.courriel_perso)}</a>` : ''}${cfg.auteur.orcid ? ` · ORCID <a href="https://orcid.org/${esc(cfg.auteur.orcid)}">${esc(cfg.auteur.orcid)}</a>` : ''}</p>
+  ${liensReseaux() ? `<p class="reseaux">${liensReseaux()}</p>` : ''}
   <p>Contenus sous licence <a href="${esc(cfg.registre.licenceUrl)}">${esc(cfg.registre.licence)}</a>. Réutilisation libre avec attribution.</p>
 </div></footer>
 ${script || ''}
@@ -75,8 +113,9 @@ function accueil() {
   const pubs = travaux.publications.filter(p => afficher_travaux_en_cours || p.statut !== 'en-preparation');
   const comms = travaux.communications.filter(p => afficher_travaux_en_cours || p.statut !== 'en-preparation');
 
+  const STATUT = { accepte: 'accepté', soumis: 'soumis', 'en-preparation': 'en préparation' };
   const listeTravaux = (items, vide) => items.length
-    ? `<ul class="works">${items.map(w => `<li><span class="y">${w.annee || 'à paraître'}</span> — ${esc(w.auteurs)}. <span class="t">${w.url ? `<a href="${esc(w.url)}">${esc(w.titre)}</a>` : esc(w.titre)}</span>. <em>${esc(w.support)}</em>.${w.doi ? ` <a href="https://doi.org/${esc(w.doi)}">doi:${esc(w.doi)}</a>` : ''}${w.statut && w.statut !== 'publie' ? `<span class="st">${esc(w.statut)}</span>` : ''}</li>`).join('')}</ul>`
+    ? `<ul class="works">${items.map(w => `<li><span class="y">${w.annee || 'à paraître'}</span> — ${esc(w.auteurs).replace(/\.$/, '')}. <span class="t">${w.url ? `<a href="${esc(w.url)}">${esc(w.titre)}</a>` : esc(w.titre)}</span>. <em>${esc(w.support)}</em>.${w.doi ? ` <a href="https://doi.org/${esc(w.doi)}">doi:${esc(w.doi)}</a>` : ''}${STATUT[w.statut] ? `<span class="st">${STATUT[w.statut]}</span>` : ''}</li>`).join('')}</ul>`
     : `<p class="empty-note">${vide}</p>`;
 
   const body = `
@@ -113,6 +152,14 @@ function accueil() {
 </div></section>
 
 <section class="section"><div class="wrap">
+  <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:22px">
+    <h2 class="section-head" style="margin:0">Le fil — ce que je lis, ce que je produis</h2>
+    <a href="${url('/fil/')}" style="margin-left:auto;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase">Tout le fil</a>
+  </div>
+  <div class="fil">${entreesFil(3)}</div>
+</div></section>
+
+<section class="section"><div class="wrap">
   <h2 class="section-head">Publications</h2>
   ${listeTravaux(pubs, 'Section à compléter — voir content/travaux.json.')}
 </div></section>
@@ -121,6 +168,13 @@ function accueil() {
   <h2 class="section-head">Communications</h2>
   ${listeTravaux(comms, 'Section à compléter — voir content/travaux.json.')}
 </div></section>
+
+${profil.distinctions && profil.distinctions.length ? `<section class="section"><div class="wrap">
+  <h2 class="section-head">Projets lauréats</h2>
+  <ul class="works">
+    ${profil.distinctions.map(d => `<li><span class="y">${d.annee}</span> — <span class="t">${esc(d.intitule)}</span>. ${esc(d.detail)}</li>`).join('')}
+  </ul>
+</div></section>` : ''}
 
 <section class="section"><div class="wrap">
   <h2 class="section-head">Fonctions et affiliations</h2>
@@ -213,6 +267,34 @@ const TAX = ${JSON.stringify(tax)};
   });
 }
 
+/* ---------- fil ---------- */
+function pageFil() {
+  const n = (fil.entrees || []).length;
+  const body = `
+<header class="hero"><div class="wrap">
+  <p class="eyebrow">Mis à jour chaque mois · ${n} entrée${n > 1 ? 's' : ''}</p>
+  <h1>Le fil</h1>
+  <p class="standfirst">Ce que je lis et ce que j'en fais. Chaque entrée porte un commentaire : pourquoi cette lecture compte, ce qu'elle déplace, ce qu'elle laisse de côté. Ni revue de presse ni liste de références — le trajet d'une pensée en train de se construire, avec ses impasses.</p>
+</div></header>
+
+<section class="section"><div class="wrap">
+  <div class="fil">${entreesFil(null)}</div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="note" style="max-width:66ch">
+    <p><b>D'où viennent ces entrées.</b> Une veille automatisée interroge chaque mois PubMed, SciELO, les revues francophones et nordiques, et propose une sélection. Je l'élague, j'écris les commentaires, je publie. Ce que vous lisez ici a été choisi et signé, jamais publié automatiquement.</p>
+  </div>
+</div></section>`;
+
+  return page({
+    title: 'Le fil',
+    description: 'Lectures commentées et productions — veille mensuelle en sciences infirmières, épistémologie du soin et numérique en santé.',
+    current: 'fil',
+    body
+  });
+}
+
 /* ---------- contribuer ---------- */
 function contribuer() {
   const mail = cfg.auteur.courriel_registre;
@@ -275,6 +357,7 @@ function write(rel, content) {
 fs.rmSync(DIST, { recursive: true, force: true });
 console.log('Génération du site :');
 write('index.html', accueil());
+write('fil/index.html', pageFil());
 write('theories/index.html', registre());
 write('contribuer/index.html', contribuer());
 write('styles.css', fs.readFileSync(path.join(ROOT, 'src/styles.css'), 'utf8'));

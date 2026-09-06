@@ -11,6 +11,10 @@
     { "titre": "Littératie numérique et critique", "detail": "Recherche d'information en santé, désinformation, littératie scientifique et littératie de l'IA chez les soignants et les citoyens." },
     { "titre": "Bioéthique et réflexion éthique régionale", "detail": "Éthique du soin, délibération collective, éthique de la recherche, enjeux éthiques du numérique en santé." }
   ],
+  "distinctions": [
+    { "annee": 2025, "intitule": "Lauréat de l'appel à projet du Fonds de dotation du CHU de La Réunion", "detail": "Porteur de « Nout' tout in parol », premier podcast santé en créole réunionnais donnant la parole aux personnes atteintes de maladies rares." },
+    { "annee": 2024, "intitule": "Lauréat de l'appel à projet de la Fondation Maladies rares", "detail": "Porteur d'e-ETP-OI, plateforme d'éducation thérapeutique numérique pour les personnes atteintes de maladies rares dans l'océan Indien." }
+  ],
   "affiliations": [
     { "role": "Doctorant en sciences infirmières", "structure": "Université Laval, Québec" },
     { "role": "Enseignant — sciences infirmières et bioéthique", "structure": "Université de La Réunion" },
