@@ -1,0 +1,48 @@
+{
+  "niveaux": [
+    {
+      "code": "P",
+      "slug": "philosophie",
+      "label": "Philosophie / métathéorie",
+      "court": "Philosophie",
+      "definition": "Énonce des présupposés ontologiques et épistémologiques ; ne se teste pas, s'argumente."
+    },
+    {
+      "code": "M",
+      "slug": "modele-conceptuel",
+      "label": "Modèle conceptuel / grande théorie",
+      "court": "Modèle conceptuel",
+      "definition": "Cadre global du métaparadigme (personne, environnement, santé, soin) ; guide sans prédire."
+    },
+    {
+      "code": "I",
+      "slug": "intermediaire",
+      "label": "Théorie intermédiaire",
+      "court": "Intermédiaire",
+      "definition": "Un phénomène délimité, des concepts opérationnalisables, des propositions testables."
+    },
+    {
+      "code": "S",
+      "slug": "situationnelle",
+      "label": "Théorie situationnelle",
+      "court": "Situationnelle",
+      "definition": "Une population, un contexte, un moment ; portée volontairement restreinte, transférabilité assumée comme limitée."
+    }
+  ],
+  "phenomenes": [
+    { "code": "epis", "label": "Savoirs, jugement clinique, épistémologie", "chapeau": "Ce que l'infirmière connaît, comment elle le connaît, et ce que ces modes de connaître rendent visible ou invisible." },
+    { "code": "rel", "label": "Relation, interaction, communication", "chapeau": "La dyade soignante comme unité d'analyse : première tradition théorique de la discipline." },
+    { "code": "car", "label": "Caring et sollicitude", "chapeau": "Le soin posé comme phénomène central plutôt que comme moyen d'atteindre un résultat clinique." },
+    { "code": "bes", "label": "Besoins, autosoin, suppléance", "chapeau": "L'agir infirmier défini par le déficit qu'il compense — matrice de l'école des besoins." },
+    { "code": "ada", "label": "Adaptation, systèmes, environnement", "chapeau": "La personne comme système ouvert en échange avec un milieu ; héritage de la théorie générale des systèmes." },
+    { "code": "uni", "label": "Champ unitaire, conscience, transformation", "chapeau": "Paradigme de la transformation : la personne n'est pas décomposable, la santé n'est pas l'absence de maladie." },
+    { "code": "cul", "label": "Culture, justice sociale, émancipation", "chapeau": "Là où la discipline se saisit du pouvoir, de la domination et de la différence." },
+    { "code": "tra", "label": "Transitions et maladie chronique", "chapeau": "L'expérience longitudinale du passage, de l'incertitude et de la gestion de soi." },
+    { "code": "sym", "label": "Symptômes, confort, souffrance, fin de vie", "chapeau": "Les phénomènes que la discipline revendique le plus fermement comme siens." },
+    { "code": "san", "label": "Promotion de la santé, populations, politiques", "chapeau": "Du comportement individuel aux déterminants structurels." },
+    { "code": "tec", "label": "Technologie, numérique, intelligence artificielle", "chapeau": "Le versant le plus mince de la théorisation infirmière — et le plus exposé aux transformations en cours." },
+    { "code": "eth", "label": "Éthique, valeurs, décision morale", "chapeau": "Là où la discipline formule sa propre théorie morale plutôt que d'appliquer la bioéthique médicale." },
+    { "code": "org", "label": "Organisation, rôle professionnel, leadership", "chapeau": "Le soin comme travail inscrit dans une bureaucratie, une identité et une division du travail." },
+    { "code": "per", "label": "Périnatalité, parentalité, développement", "chapeau": "Le seul champ où la discipline a produit une théorisation cumulative et continue depuis les années 1960." }
+  ]
+}

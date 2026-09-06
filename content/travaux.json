@@ -1,0 +1,27 @@
+{
+  "_mode_emploi": "Une entrée par publication ou communication. Le champ type accepte : article, chapitre, communication, poster, rapport, autre. Le champ statut accepte : publie, accepte, soumis, en-preparation. Les entrées en-preparation ne sont pas affichées tant que afficher_travaux_en_cours vaut false dans build.js. Supprimez les exemples ci-dessous.",
+  "publications": [
+    {
+      "type": "article",
+      "statut": "en-preparation",
+      "auteurs": "Mauve, Y.",
+      "annee": null,
+      "titre": "Exemple — remplacer par une référence réelle",
+      "support": "Nom de la revue",
+      "doi": "",
+      "url": "",
+      "acces_libre": false
+    }
+  ],
+  "communications": [
+    {
+      "type": "communication",
+      "statut": "publie",
+      "auteurs": "Mauve, Y.",
+      "annee": null,
+      "titre": "Exemple — remplacer par une communication réelle",
+      "support": "Nom du congrès, ville",
+      "url": ""
+    }
+  ]
+}

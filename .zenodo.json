@@ -1,0 +1,21 @@
+{
+  "title": "Registre des théories infirmières",
+  "description": "Répertoire francophone des cadres théoriques de la discipline infirmière, classés selon le degré d'abstraction (taxonomie de Fawcett) et le phénomène central. Critère d'inclusion unique : autrice ou auteur principal infirmier·ère.",
+  "upload_type": "dataset",
+  "license": "cc-by-4.0",
+  "language": "fra",
+  "keywords": [
+    "sciences infirmières",
+    "théorie infirmière",
+    "épistémologie du soin",
+    "taxonomie de Fawcett",
+    "nursing theory"
+  ],
+  "creators": [
+    {
+      "name": "Mauve, Yohan",
+      "affiliation": "Université Laval",
+      "orcid": "0009-0006-6179-4782"
+    }
+  ]
+}

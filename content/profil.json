@@ -1,0 +1,25 @@
+{
+  "accroche": "Sciences infirmières, épistémologie du soin et critique du numérique en santé.",
+  "presentation": [
+    "Infirmier et doctorant en sciences infirmières à l'Université Laval, je travaille depuis La Réunion sur la manière dont les infrastructures numériques et algorithmiques reconfigurent les régimes d'autorité épistémique dans le soin : quels savoirs elles rendent visibles, lesquels elles hiérarchisent, lesquels elles marginalisent.",
+    "Ma thèse porte sur le pluralisme des savoirs infirmiers dans les environnements cliniques numérisés. J'y développe la notion d'autorité cognitive automatisée — la tendance à accorder une crédibilité épistémique accrue aux sorties algorithmiques — et j'interroge les typologies établies des modes de connaître infirmiers depuis une perspective critique et décoloniale. Ce projet est dirigé par Maxime Sasseville et Marie-Pierre Gagnon.",
+    "J'enseigne les sciences infirmières et la bioéthique à l'Université de La Réunion, ainsi que la recherche à l'Institut en santé de La Réunion. Je coordonne l'Espace de réflexion éthique régional de La Réunion et je siège au comité scientifique et éthique de la recherche du CHU de La Réunion."
+  ],
+  "axes": [
+    { "titre": "Épistémologie du soin", "detail": "Modes de connaître infirmiers, savoirs profanes et traditionnels, injustice épistémique, pluralisme des savoirs." },
+    { "titre": "Numérique critique et IA en santé", "detail": "Autorité cognitive automatisée, médiation algorithmique du jugement clinique, gouvernementalité algorithmique." },
+    { "titre": "Littératie numérique et critique", "detail": "Recherche d'information en santé, désinformation, littératie scientifique et littératie de l'IA chez les soignants et les citoyens." },
+    { "titre": "Bioéthique et réflexion éthique régionale", "detail": "Éthique du soin, délibération collective, éthique de la recherche, enjeux éthiques du numérique en santé." }
+  ],
+  "affiliations": [
+    { "role": "Doctorant en sciences infirmières", "structure": "Université Laval, Québec" },
+    { "role": "Enseignant — sciences infirmières et bioéthique", "structure": "Université de La Réunion" },
+    { "role": "Enseignant — recherche", "structure": "Institut en santé de La Réunion (IES)" },
+    { "role": "Coordinateur", "structure": "Espace de réflexion éthique régional de La Réunion" },
+    { "role": "Membre du comité scientifique et éthique de la recherche", "structure": "CHU de La Réunion" },
+    { "role": "Membre du laboratoire", "structure": "Continuum Lab, Canada" },
+    { "role": "Membre étudiant", "structure": "VITAM — Centre de recherche en santé durable" },
+    { "role": "Membre étudiant", "structure": "OBVIA" }
+  ],
+  "_notes": "Biographie et affiliations relues et validées par Yohan Mauve, septembre 2026. Reste à compléter : content/travaux.json (publications et communications)."
+}

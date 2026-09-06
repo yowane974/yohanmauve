@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: Registre des théories infirmières
+message: Si vous utilisez ce registre, citez-le avec les métadonnées ci-dessous.
+type: dataset
+authors:
+  - family-names: Mauve
+    given-names: Yohan
+    affiliation: Université Laval
+    orcid: "https://orcid.org/0009-0006-6179-4782"
+abstract: >-
+  Répertoire francophone des cadres théoriques de la discipline infirmière, classés
+  selon le degré d'abstraction (taxonomie de Fawcett) et le phénomène central.
+  Critère d'inclusion unique : autrice ou auteur principal infirmier·ère.
+keywords:
+  - sciences infirmières
+  - théorie infirmière
+  - épistémologie du soin
+  - taxonomie de Fawcett
+license: CC-BY-4.0
+version: 0.1.0
+date-released: "2026-09-06"
