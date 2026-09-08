@@ -2,6 +2,32 @@
   "_mode_emploi": "Le fil : ce que je lis et ce que je produis. Une entrée par élément. type : lecture (article, rapport, ouvrage) ou production (vidéo, podcast, communication, publication, carrousel). date au format AAAA-MM-JJ. Le commentaire est le cœur de l'entrée : il dit pourquoi cette lecture compte, pas ce qu'elle contient. Les entrées sont affichées de la plus récente à la plus ancienne ; les dix dernières sur la page d'accueil, toutes sur /fil/.",
   "entrees": [
     {
+      "date": "2026-09-08",
+      "type": "lecture",
+      "titre": "Hauntology and absent presences in contemporary nursing education",
+      "source": "Esteron, J. (2026). Nurse Education Today, 167, 107228",
+      "url": "https://doi.org/10.1016/j.nedt.2026.107228",
+      "commentaire": "L'hantologie de Derrida appliquée à la formation infirmière : ce qui est marginalisé par les dispositifs — caring, savoirs situés, jugement éthique — ne disparaît pas, il continue d'agir sans avoir de place stable. D'où l'idée que le malaise des étudiants n'est pas un défaut d'application des réformes mais le signe d'une responsabilité éthique non résolue. La formule qui me reste : une action techniquement correcte peut rester éthiquement insuffisante — ce que l'approche par compétences ne peut ni voir ni évaluer. L'article évite le contresens technophobe en passant par Locsin : le numérique n'est pas l'ennemi du caring, il le devient quand il réduit la personne à ce qui se mesure. La lecture de Derrida reste cependant instrumentale, l'hantologie y sert de lentille plus que d'appareil, et rien n'est dit des learning analytics ni de la gouvernementalité algorithmique — c'est précisément là que le prolongement m'intéresse.",
+      "tags": [
+        "hantologie",
+        "pédagogie",
+        "numérique critique"
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "type": "lecture",
+      "titre": "Epistemic injustice in nursing knowledge production : a three-pillar framework for recognition, redistribution, and representation",
+      "source": "Aqtam, I. (2026). Nursing Philosophy, 27(3), e70101",
+      "url": "https://doi.org/10.1111/nup.70101",
+      "commentaire": "Traduit Fricker et Fraser en dispositif institutionnel : reconnaissance des savoirs racisés, autochtones et du Sud global comme sources autorisées ; redistribution des ressources épistémiques — financements, citations, comités éditoriaux ; représentation effective dans les instances qui décident des programmes et des recrutements. L'article ne s'arrête pas aux contenus enseignés, il interroge les concepts fondateurs du métaparadigme, et pose qu'une ontologie relationnelle comme Ubuntu est incompatible avec la conception individualiste de la personne dont ils héritent. Ce qui m'intéresse le plus est l'outil d'audit en six questions : il rend la justice épistémique vérifiable, au risque assumé de la réduire à un tableau de bord. Sa limite, l'auteur la nomme lui-même : une synthèse sur les savoirs du Sud global construite à partir de bases anglophones occidentales reconduit une part des exclusions qu'elle critique.",
+      "tags": [
+        "injustice épistémique",
+        "décolonialité",
+        "théorie infirmière"
+      ]
+    },
+    {
       "date": "2026-09-06",
       "type": "lecture",
       "titre": "The homogenizing effect of large language models on human expression and thought",

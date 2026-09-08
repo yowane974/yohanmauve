@@ -47,6 +47,14 @@ function liensReseaux() {
   return actifs.map(r => `<a href="${esc(l[r.cle])}" rel="me noopener">${r.label}</a>`).join('<span class="sep">/</span>');
 }
 
+const GC = (cfg.analytics && cfg.analytics.goatcounterCode) ? cfg.analytics.goatcounterCode : '';
+const ANALYTICS = GC
+  ? `<script data-goatcounter="https://${GC}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>`
+  : '';
+const MENTION_MESURE = GC
+  ? '<p class="mesure">Fréquentation mesurée avec GoatCounter : pages vues, provenance, pays. Sans cookie, sans identifiant, sans donnée personnelle conservée.</p>'
+  : '';
+
 function page({ title, description, current, body }) {
   return `<!doctype html>
 <html lang="fr">
@@ -82,7 +90,9 @@ ${body}
   <p>${esc(profil.prenom)} ${esc(profil.nom)} — ${esc(cfg.auteur.titre)}${cfg.auteur.courriel_perso ? ` · <a href="mailto:${esc(cfg.auteur.courriel_perso)}">${esc(cfg.auteur.courriel_perso)}</a>` : ''}${cfg.auteur.orcid ? ` · ORCID <a href="https://orcid.org/${esc(cfg.auteur.orcid)}">${esc(cfg.auteur.orcid)}</a>` : ''}</p>
   ${liensReseaux() ? `<p class="reseaux">${liensReseaux()}</p>` : ''}
   <p>Contenus sous licence <a href="${esc(cfg.registre.licenceUrl)}">${esc(cfg.registre.licence)}</a>. Réutilisation libre avec attribution.</p>
+  ${MENTION_MESURE}
 </div></footer>
+${ANALYTICS}
 </body>
 </html>`;
 }

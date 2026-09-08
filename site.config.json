@@ -17,8 +17,8 @@
   "registre": {
     "titre": "Registre des théories infirmières",
     "sousTitre": "Répertoire francophone des cadres théoriques de la discipline infirmière",
-    "version": "0.1.2",
-    "date": "2026-09-06",
+    "version": "0.1.3",
+    "date": "2026-09-08",
     "doi": "10.5281/zenodo.22549104",
     "licence": "CC BY 4.0",
     "licenceUrl": "https://creativecommons.org/licenses/by/4.0/deed.fr"
@@ -28,7 +28,8 @@
     "baseUrl : vide, car le site est servi à la racine de yomauve.re. Ne le remplir (/nom-du-depot) que si le site repassait sur une URL github.io en sous-chemin.",
     "doi : DOI concept Zenodo — il pointe toujours vers la version la plus récente, inutile de le changer à chaque release.",
     "courriel_registre : contact@yomauve.re, adresse dédiée aux contributions, hébergée au nom de domaine — pérenne, indépendante du cursus.",
-    "formulaire.web3formsKey : clé d'accès Web3Forms (https://web3forms.com) associée à contact@yomauve.re. Tant qu'elle est vide, la page Contact affiche l'adresse courriel seule, sans formulaire — le site reste valide."
+    "formulaire.web3formsKey : clé d'accès Web3Forms (https://web3forms.com) associée à contact@yomauve.re. Tant qu'elle est vide, la page Contact affiche l'adresse courriel seule, sans formulaire — le site reste valide.",
+    "analytics.goatcounterCode : identifiant du compte GoatCounter, c'est-à-dire le sous-domaine choisi à l'inscription (par exemple « yomauve » pour yomauve.goatcounter.com). Vide = aucune mesure d'audience, aucun script tiers chargé."
   ],
   "formulaire": {
     "web3formsKey": "e7ffd743-3d59-475b-a15b-a0209f3e3de1",
@@ -40,5 +41,8 @@
       "Encadrement, mémoire, thèse",
       "Autre"
     ]
+  },
+  "analytics": {
+    "goatcounterCode": ""
   }
 }
