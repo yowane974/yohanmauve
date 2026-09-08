@@ -2674,5 +2674,113 @@
     "resume": "Paradigme décolonial de théorisation infirmière ancré dans les épistémologies et les manières de vivre philippines, articulé autour de deux mouvements — pagbaklas (démonter) et pag-ugnay (relier) — et illustré par le concept de pakikiramdam, l'attunement relationnel.",
     "lecture_critique": "Première formalisation d'une nursologie nationale explicitement décoloniale, opérationnalisant le Pluriverse of Nursologies. Sa portée hors du contexte philippin est indécidée : l'auteur la présente comme tentative, et l'exemplaire proposé reste unique. Le modèle intéresse néanmoins toute discipline cherchant à théoriser depuis une situation postcoloniale.",
     "hors_nursology": true
+  },
+  {
+    "id": 224,
+    "nom": "Theory of Communal-Relational Person-Becoming",
+    "auteurs": "Jonathan Bayuo",
+    "annee": 2026,
+    "niveau": "modele-conceptuel",
+    "niveau_code": "M",
+    "phenomene": "per",
+    "resume": "La personne n'est pas une unité psychologique autosuffisante mais un devenir moral conféré par la participation à la vie communautaire ; la santé devient harmonie relationnelle et le soin un acte communautaire et moral, à partir des ontologies relationnelles africaines.",
+    "lecture_critique": "Contraste construit sur des idéaux-types (Locke contre un bloc « ontologies africaines » agrégeant Ubuntu, Ukama et consciencisme), au risque d'homogénéiser ce qu'il entend dépasser. Le coût normatif d'une personnéité conférée par la communauté n'est pas traité : statut de celui que la communauté ne reconnaît pas.",
+    "hors_nursology": true
+  },
+  {
+    "id": 225,
+    "nom": "Unitary Transformative Decision-Making Theory (U-TIDE)",
+    "auteurs": "Luca Bertocchi, Rita Gengo, Ana Choperena, Chinma Stella Adereti, Suellen Cristina Dias Emidio, Paulo Carlos Garcia & Dorothy Jones",
+    "annee": 2026,
+    "niveau": "intermediaire",
+    "niveau_code": "I",
+    "phenomene": "uni",
+    "resume": "La décision de soin n'est ni algorithmique ni purement intuitive : elle est un processus dialogique, appréciatif et transformateur co-construit entre soignant et personne soignée, articulé à dix concepts du paradigme unitaire-transformatif.",
+    "lecture_critique": "Revendique simultanément l'irréductibilité du champ unitaire et l'alignement sur les Functional Health Patterns et les terminologies standardisées, sans justifier la traduction entre les deux. Validation par consensus procédural plutôt que par épreuve empirique.",
+    "hors_nursology": true
+  },
+  {
+    "id": 226,
+    "nom": "Middle-Range Theory on Fatigue in Chronic Kidney Disease",
+    "auteurs": "Angélica Paixão de Menezes, Leonardo Alexandrino da Silva, Ana Luisa Brandão de Carvalho Lira, Marcos Venícios de Oliveira Lopes, Rafaella Pessoa Moreira & Nirla Gomes Guedes",
+    "annee": 2026,
+    "niveau": "intermediaire",
+    "niveau_code": "I",
+    "phenomene": "sym",
+    "resume": "La fatigue en insuffisance rénale chronique est structurée par cinq attributs essentiels, treize antécédents cliniques, neuf référents empiriques et huit propositions, formant un cadre de raisonnement clinique et d'intervention infirmière.",
+    "lecture_critique": "Théorie dérivée d'une revue intégrative de 41 études, donc de la littérature publiée et non de l'expérience des personnes dialysées : le sujet connaissant reste l'analyste documentaire. Formalisation (pictogramme, propositions) qui donne une allure testable à une synthèse documentaire.",
+    "hors_nursology": true
+  },
+  {
+    "id": 227,
+    "nom": "Middle-Range Theory of Telehealth Use for Disease Prevention",
+    "auteurs": "Thanet Sinchaothong, Ramona A. Benkert, Dalia Khalil & Rosalind M. Peters",
+    "annee": 2026,
+    "niveau": "intermediaire",
+    "niveau_code": "I",
+    "phenomene": "tec",
+    "resume": "Dérivée de la théorie de l'auto-soin d'Orem, elle relie l'usage de la télésanté aux comportements d'auto-soin préventif et aux résultats de santé, comblant un chaînon absent entre technologie et prévention.",
+    "lecture_critique": "Présuppose l'agentivité d'auto-soin comme propriété de l'individu (héritage orémien) ; l'accès différencié, la littératie numérique et l'effet du dispositif sur le jugement soignant sont hors cadre. Théorie du comportement individuel avec un objet technique en variable indépendante, plus qu'une théorie sociotechnique.",
+    "hors_nursology": true
+  },
+  {
+    "id": 228,
+    "nom": "Theory of Women's Health Across the Lifespan (TWHL)",
+    "auteurs": "Mary Roberts Davis, MinKyoung Song, Lyndsey Anderson, Shirin O. Hiatt, Susan J. Rosenkranz, Deanne Tibbitts, Ellen L. Tilden & Quin E. Denfeld",
+    "annee": 2026,
+    "niveau": "intermediaire",
+    "niveau_code": "I",
+    "phenomene": "san",
+    "resume": "La santé des femmes se structure autour de trois construits d'« engagement dans la vie » — comportemental, fonctionnel et cognitif — modulés par des domaines internes, relationnels et externes qui interagissent dynamiquement au fil des étapes de vie.",
+    "lecture_critique": "Le construit d'« engagement dans la vie » absorbe activité, capacité et décision, ce qui le rend difficilement falsifiable. Les déterminants structurels sont placés en domaine « externe » autour d'un centre individuel, ce qui limite la portée de la théorie sur les disparités qu'elle vise. Couple sexe/genre juxtaposé mais non tranché.",
+    "hors_nursology": true
+  },
+  {
+    "id": 229,
+    "nom": "The Maternal Adaptation Framework",
+    "auteurs": "Stefanie L. Boyles & Elise N. Erickson",
+    "annee": 2026,
+    "niveau": "situationnelle",
+    "niveau_code": "S",
+    "phenomene": "ada",
+    "resume": "Extension domaine-spécifique du modèle d'adaptation de Roy : la grossesse est un état physiologique dynamique d'adaptation dont les défaillances (prééclampsie, travail prématuré) émergent de l'interaction entre processus adaptatifs et influences contextuelles, sans cause unique.",
+    "lecture_critique": "Le modèle de Roy porte sur la personne comme système adaptatif ; il est ici mobilisé à l'échelle de mécanismes placentaires et physiologiques, glissement d'échelle non discuté. Fonctionne davantage comme grammaire d'organisation de facteurs de risque que comme théorie du soin.",
+    "hors_nursology": true
+  },
+  {
+    "id": 230,
+    "nom": "NGRNs' Evolving Identity of Social Justice",
+    "auteurs": "M. Erin Hoying & Karen J. Foli",
+    "annee": 2026,
+    "niveau": "situationnelle",
+    "niveau_code": "S",
+    "phenomene": "eth",
+    "resume": "Théorie situationnelle issue d'une théorisation ancrée constructiviste : les infirmières nouvellement diplômées co-construisent leur rapport à la justice sociale au fil de quatre processus articulés en un mouvement fluide, dont dépend la formation d'une identité de justice sociale durant la transition vers la pratique.",
+    "lecture_critique": "Base empirique de 28 infirmières d'une seule région du Midwest américain pour une théorie de la justice sociale. La justification finale reconduit l'argument de justice à un argument de rétention du personnel et de résultats patients, ce qui neutralise sa portée critique. Le nom des quatre processus reste à relever dans le texte intégral, la notice PubMed les élidant.",
+    "hors_nursology": true
+  },
+  {
+    "id": 231,
+    "nom": "Transformative Caring Theory",
+    "auteurs": "Kerry A. Richardson, Mary K. McCurry & Susan Hunter Revell",
+    "annee": 2026,
+    "niveau": "intermediaire",
+    "niveau_code": "I",
+    "phenomene": "car",
+    "resume": "Synthèse théorique (Walker & Avant) du caring de Watson et de l'apprentissage transformateur de Mezirow : le développement des compétences de caring chez les étudiantes procède d'une transformation des perspectives de sens, appelant une pédagogie émancipatrice plutôt qu'un entraînement comportemental.",
+    "lecture_critique": "Attelle une métaphysique transpersonnelle (Watson) à une rationalité communicationnelle d'inspiration habermassienne (Mezirow) sans traiter leur compatibilité ontologique. La visée émancipatrice est fragilisée par le dispositif curriculaire où l'enseignant définit et évalue les perspectives de sens à transformer.",
+    "hors_nursology": true
+  },
+  {
+    "id": 232,
+    "nom": "Caregiver-Infant Interaction Framework",
+    "auteurs": "Bonnie Hepler, Kaboni Whitney Gondwe & Debra Brandon",
+    "annee": 2026,
+    "niveau": "intermediaire",
+    "niveau_code": "I",
+    "phenomene": "rel",
+    "resume": "Construit selon le processus de génération théorique de Chinn & Kramer, le cadre situe la santé relationnelle précoce dans les interactions instant par instant entre donneur de soin et nourrisson, façonnées par l'environnement socio-écologique, et en dérive des points d'appui pour l'action infirmière.",
+    "lecture_critique": "Part de l'Early Relational Health, catégorie promue par l'American Academy of Pediatrics, posée comme donnée. Décrit ce qui cultive ou endommage la relation sans thématiser qui définit la relation bonne, ni l'effet de surveillance qu'exerce l'observation fine du lien sur les familles les plus exposées à l'évaluation institutionnelle. Année à confirmer : PubMed indique 2025, le numéro est daté 2026.",
+    "hors_nursology": true
   }
 ]
