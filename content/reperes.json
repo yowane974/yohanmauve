@@ -1,0 +1,153 @@
+{
+  "_mode_emploi": "Page « Repères » : porte d'entrée du registre, écrite pour un infirmier en poste. Objectif : montrer que chacun travaille déjà avec une théorie, plutôt que plaider pour la théorie. Ton : direct, sans référence en corps de texte, sources en fin de page. Types de sections : prose, definitions, chrono, objections, lectures. Ajouter \"fond\": \"nuit\" à une section pour l'afficher sur le fond sombre prune, comme le bloc registre de l'accueil.",
+  "eyebrow": "Avant le registre",
+  "titre": "Repères",
+  "tagline": "Vous travaillez déjà avec une théorie infirmière.",
+  "taglineItalique": "Personne ne vous a dit son nom.",
+  "sections": [
+    {
+      "type": "prose",
+      "eyebrow": "Une scène",
+      "titre": "Les quatorze",
+      "titreItalique": "besoins",
+      "paragraphes": [
+        "Respirer, boire et manger, éliminer, se mouvoir, dormir, se vêtir, maintenir sa température, être propre, éviter les dangers, communiquer, agir selon ses croyances, s'occuper, se récréer, apprendre. Tout infirmier formé en France les a recopiés, appris, appliqués. Beaucoup les utilisent encore chaque jour pour structurer un recueil de données ou une transmission.",
+        "Ces quatorze besoins ne sont pas un fait de nature. Ils ont été écrits par une femme, Virginia Henderson, une infirmière américaine, dans les années 1950 et 1960. Elle cherchait à répondre à une question précise : qu'est-ce que l'infirmière fait, que le médecin ne fait pas ? Sa réponse — aider la personne à accomplir ce qu'elle accomplirait seule si elle en avait la force, la volonté ou le savoir — était une prise de position, à un moment où la profession devait justifier son existence propre.",
+        "Autrement dit : vous avez hérité d'une théorie. Elle décide de ce que vous notez, de ce que vous cherchez, de ce que vous considérez comme un problème relevant de vous. Et comme toute théorie, elle laisse des choses dehors. La solitude d'une personne âgée n'entre dans aucun des quatorze besoins sans qu'on la traduise en autre chose.",
+        "Cette page ne cherche pas à vous convaincre que la théorie est importante. Elle part du constat inverse : vous en utilisez déjà une, et il vaut mieux savoir laquelle."
+      ]
+    },
+    {
+      "type": "definitions",
+      "eyebrow": "Vocabulaire",
+      "titre": "Quatre mots",
+      "titreItalique": "suffisent",
+      "chapeau": "Le vocabulaire théorique est intimidant surtout parce qu'il n'est jamais expliqué. Voici les quatre termes qui ouvrent le reste.",
+      "items": [
+        {
+          "terme": "Concept",
+          "texte": "Un mot qui découpe un morceau de réalité. « Douleur », « autonomie », « caring » sont des concepts : ils désignent quelque chose et, ce faisant, en excluent autre chose. Changer de concept change ce qu'on voit."
+        },
+        {
+          "terme": "Modèle conceptuel",
+          "texte": "Un cadre général qui répond aux quatre grandes questions de la discipline : qu'est-ce qu'une personne, un environnement, la santé, le soin ? Il oriente sans prédire. Henderson, Orem, Roy, Rogers ont chacun proposé le leur, et ils sont incompatibles entre eux."
+        },
+        {
+          "terme": "Théorie intermédiaire",
+          "texte": "Un cadre plus étroit, sur un phénomène délimité : l'incertitude dans la maladie, le confort, la transition. Assez précis pour être mis à l'épreuve dans une étude. C'est la forme la plus produite aujourd'hui."
+        },
+        {
+          "terme": "Métaparadigme",
+          "texte": "Le socle sur lequel la discipline s'est accordée : personne, environnement, santé, soin. Le plus abstrait des niveaux, et le plus discuté — plusieurs auteurs contestent qu'il soit universel, notamment parce qu'il suppose une conception individualiste de la personne."
+        }
+      ]
+    },
+    {
+      "type": "chrono",
+      "eyebrow": "Histoire",
+      "titre": "Cinq temps, un",
+      "titreItalique": "siècle et demi",
+      "chapeau": "Chaque vague théorique a répondu à un problème de son époque. Savoir lequel évite de lire ces textes hors de leur situation.",
+      "items": [
+        {
+          "periode": "1859",
+          "titre": "Séparer",
+          "texte": "Florence Nightingale publie ses Notes on Nursing et pose que soigner et guérir sont deux pratiques distinctes : le rôle infirmier est de placer la personne dans les meilleures conditions pour que la nature agisse. L'environnement — air, lumière, bruit, propreté — devient un objet infirmier. La discipline naît d'une séparation d'avec la médecine."
+        },
+        {
+          "periode": "1950-1980",
+          "titre": "Exister",
+          "texte": "Les soins infirmiers entrent à l'université américaine. Pour obtenir un doctorat, il faut un objet de recherche propre. Peplau, Henderson, Johnson, puis Orem, Roy, Rogers, King, Leininger, Watson produisent en trois décennies l'essentiel des grands modèles conceptuels. L'enjeu est institutionnel autant qu'intellectuel : prouver qu'il existe un savoir infirmier qui n'est pas de la médecine appliquée."
+        },
+        {
+          "periode": "1990-2010",
+          "titre": "Descendre",
+          "texte": "Les grands modèles sont jugés trop abstraits pour la recherche empirique. La production bascule vers les théories intermédiaires : un phénomène, des concepts mesurables, des propositions vérifiables. On gagne en utilisabilité ce qu'on perd en portée."
+        },
+        {
+          "periode": "2000-2020",
+          "titre": "Se défendre",
+          "texte": "L'evidence-based practice s'impose comme critère de légitimité. La hiérarchie des preuves valorise l'essai randomisé et disqualifie ce qui ne s'y prête pas : le récit, la relation, le jugement situé. La théorie infirmière devient suspecte de ne pas être scientifique, au moment même où elle avait le plus à dire sur ce que la preuve ne capte pas."
+        },
+        {
+          "periode": "Depuis 2020",
+          "titre": "Décentrer",
+          "texte": "Une critique venue du Sud global, des communautés autochtones et des chercheurs racisés met en cause l'origine géographique et culturelle de ces cadres. La question n'est plus seulement quelle théorie choisir, mais qui a eu le droit de théoriser, et selon quels critères. Le numérique et l'intelligence artificielle ajoutent une couche : les dispositifs décident désormais, en partie, de ce qui compte comme information pertinente."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "En pratique",
+      "titre": "Ce que ça change",
+      "titreItalique": "au chevet",
+      "paragraphes": [
+        "Une théorie ne dit pas quoi faire. Elle décide de ce qu'on remarque, ce qui est bien plus déterminant.",
+        "Une infirmière qui travaille avec le modèle de l'autosoin d'Orem verra d'abord un déficit de capacité : que cette personne ne peut plus faire seule, et comment restaurer cette capacité. Une infirmière qui travaille avec Watson verra d'abord une rencontre, et cherchera ce qui, dans la relation, soutient ou empêche. Devant le même patient, elles ne noteront pas la même chose, ne poseront pas les mêmes questions, ne transmettront pas les mêmes éléments.",
+        "Aucune des deux n'a tort. Mais celle qui ignore le cadre dont elle hérite ne peut ni le discuter, ni en changer quand la situation l'exige. C'est la différence entre appliquer une grille et exercer un jugement.",
+        "C'est aussi ce qui se joue avec les outils numériques. Un logiciel de soins, un score de risque, un assistant génératif portent eux aussi une théorie implicite de ce qui mérite d'être enregistré. Savoir reconnaître un cadre théorique dans un texte, c'est aussi savoir en reconnaître un dans un écran."
+      ],
+      "fond": "nuit"
+    },
+    {
+      "type": "objections",
+      "eyebrow": "Objections",
+      "titre": "Ce qu'on entend",
+      "titreItalique": "souvent",
+      "chapeau": "Trois reproches courants, tous fondés en partie. Les balayer serait malhonnête.",
+      "items": [
+        {
+          "objection": "« Ça ne sert à rien en pratique. »",
+          "reponse": "Vrai si l'on attend d'une théorie qu'elle indique une conduite à tenir : ce n'est pas ce qu'elle fait. Faux si l'on observe qu'un service qui change de modèle de transmission change aussi ce que ses soignants voient. La théorie agit en amont de l'action, sur l'attention."
+        },
+        {
+          "objection": "« C'est américain. »",
+          "reponse": "Largement vrai, et c'est un problème réel. L'essentiel du corpus a été produit aux États-Unis entre 1950 et 1980, dans un contexte de professionnalisation particulier, avec une conception individualiste de la personne. Les traditions nordique, brésilienne, francophone, philippine existent et sont peu traduites. Le registre de ce site tente d'y remédier, sans prétendre l'avoir fait."
+        },
+        {
+          "objection": "« C'est du jargon. »",
+          "reponse": "Souvent vrai. Une partie de cette littérature confond abstraction et profondeur, et se protège derrière un vocabulaire opaque. Le test est simple : si un texte théorique ne vous permet pas, après lecture, de regarder une situation clinique autrement, il ne vaut pas votre temps. Abandonnez-le sans culpabilité."
+        }
+      ]
+    },
+    {
+      "type": "lectures",
+      "eyebrow": "Commencer",
+      "titre": "Cinq portes",
+      "titreItalique": "d'entrée",
+      "chapeau": "Pas trente titres. Cinq, dans l'ordre où je les conseillerais à un collègue.",
+      "items": [
+        {
+          "reference": "Virginia Henderson, La nature des soins infirmiers (1966)",
+          "note": "Court, clair, et vous y reconnaîtrez ce que vous faites déjà. Le meilleur endroit pour mesurer l'écart entre le texte d'origine et ce qu'on vous en a transmis."
+        },
+        {
+          "reference": "Barbara Carper, Fundamental patterns of knowing in nursing (1978)",
+          "note": "Quinze pages qui distinguent quatre manières de savoir : empirique, esthétique, personnelle, éthique. L'article le plus cité de la discipline, et celui qui rend le plus de service au quotidien."
+        },
+        {
+          "reference": "Marlaine Smith (dir.), Nursing Theories and Nursing Practice, F. A. Davis",
+          "note": "L'ouvrage de référence pour se repérer dans l'ensemble du champ, théorie par théorie, avec des exemples d'application. À consulter par chapitres, pas à lire d'un bout à l'autre."
+        },
+        {
+          "reference": "Jacqueline Fawcett & Susan DeSanto-Madeya, Contemporary Nursing Knowledge",
+          "note": "La taxonomie qui organise le registre de ce site, exposée par celle qui l'a construite. Utile pour comprendre le classement, et pour voir ce qu'il impose."
+        },
+        {
+          "reference": "Jerome Cleofas, Building a Pluriverse of Nursologies (2024)",
+          "note": "La critique décoloniale de tout ce qui précède, y compris de la taxonomie de Fawcett. À lire en dernier, une fois qu'on a de quoi la discuter."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Et ensuite",
+      "titre": "Le",
+      "titreItalique": "registre",
+      "paragraphes": [
+        "Le registre de ce site recense les cadres théoriques de la discipline, classés par degré d'abstraction et par phénomène. Chaque entrée porte un résumé et une lecture critique — ce que la théorie affirme, et ce qu'elle laisse dehors.",
+        "Il ne s'agit pas de choisir une théorie et de s'y tenir. Il s'agit de savoir de quel cadre on hérite, de pouvoir en nommer un autre quand la situation le demande, et de reconnaître qu'aucun ne couvre tout."
+      ]
+    }
+  ]
+}

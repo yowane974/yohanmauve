@@ -21,9 +21,19 @@ const profil = read('content/profil.json');
 const travaux = read('content/travaux.json');
 const fil = read('content/fil.json');
 const socleData = read('content/socle.json');
+const reperesData = read('content/reperes.json');
 
+// Espaces insécables de la typographie française : évite les guillemets ou la
+// ponctuation double rejetés seuls en début de ligne.
+function typo(s) {
+  return s
+    .replace(/«\s+/g, '\u00AB\u202F')
+    .replace(/\s+»/g, '\u202F\u00BB')
+    .replace(/\s+([;!?])/g, '\u202F$1')
+    .replace(/\s+:/g, '\u00A0:');
+}
 function esc(s) {
-  return String(s == null ? '' : s)
+  return typo(String(s == null ? '' : s))
     .replace(/&(?!(?:[a-zA-Z]+|#\d+);)/g, '&amp;')
     .replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
@@ -79,6 +89,7 @@ ${FONTS}
   <nav>
     <a href="${url('/')}"${current === 'accueil' ? ' aria-current="page"' : ''}>Accueil</a>
     <a href="${url('/fil/')}"${current === 'fil' ? ' aria-current="page"' : ''}>Fil</a>
+    <a href="${url('/reperes/')}"${current === 'reperes' ? ' aria-current="page"' : ''}>Repères</a>
     <a href="${url('/theories/')}"${current === 'theories' ? ' aria-current="page"' : ''}>Registre</a>
     <a href="${url('/socle/')}"${current === 'socle' ? ' aria-current="page"' : ''}>Socle</a>
     <a href="${url('/contribuer/')}"${current === 'contribuer' ? ' aria-current="page"' : ''}>Contribuer</a>
@@ -391,6 +402,73 @@ function contribuer() {
   });
 }
 
+/* ---------- repères ---------- */
+function blocRepere(s) {
+  let corps = '';
+  if (s.type === 'prose') {
+    corps = `<div class="prose">${s.paragraphes.map(p => `<p>${esc(p)}</p>`).join('')}</div>`;
+  } else if (s.type === 'definitions') {
+    corps = `<div><dl class="spec">${s.items.map(i => `<dt>${esc(i.terme)}</dt><dd>${esc(i.texte)}</dd>`).join('')}</dl></div>`;
+  } else if (s.type === 'chrono') {
+    corps = `<div><ol class="chrono">${s.items.map(i => `<li><span class="per">${esc(i.periode)}</span><div><h3>${esc(i.titre)}</h3><p>${esc(i.texte)}</p></div></li>`).join('')}</ol></div>`;
+  } else if (s.type === 'objections') {
+    corps = `<div><ul class="objs">${s.items.map(i => `<li><p class="obj">${esc(i.objection)}</p><p class="rep">${esc(i.reponse)}</p></li>`).join('')}</ul></div>`;
+  } else if (s.type === 'lectures') {
+    corps = `<div><ul class="socle">${s.items.map(i => `<li><p class="ref">${esc(i.reference)}</p><p class="pourquoi">${esc(i.note)}</p></li>`).join('')}</ul></div>`;
+  }
+  return corps;
+}
+
+function reperes() {
+  let rang = 0;
+  const corps = reperesData.sections.map(s => {
+    if (s.fond === 'nuit') {
+      return `
+<section class="section nuit-bloc"><div class="wrap">
+  <div class="duo">
+    <div>
+      <p class="eyebrow-rule">${esc(s.eyebrow)}</p>
+      <h2>${esc(s.titre)}${s.titreItalique ? ` <i>${esc(s.titreItalique)}</i>` : ''}</h2>
+      ${s.chapeau ? `<p class="chapeau">${esc(s.chapeau)}</p>` : ''}
+    </div>
+    ${blocRepere(s)}
+  </div>
+</div></section>`;
+    }
+    const i = rang++;
+    return `
+<section class="section${i % 2 ? ' alt' : ''}"><div class="wrap">
+  <div class="duo">
+    <div>
+      <p class="eyebrow-rule">${esc(s.eyebrow)}</p>
+      <h2>${esc(s.titre)}${s.titreItalique ? ` <i>${esc(s.titreItalique)}</i>` : ''}</h2>
+      ${s.chapeau ? `<p class="chapeau">${esc(s.chapeau)}</p>` : ''}
+    </div>
+    ${blocRepere(s)}
+  </div>
+</div></section>`;
+  }).join('');
+
+  const body = `
+<header class="hero"><div class="wrap">
+  <p class="eyebrow">${esc(reperesData.eyebrow)}</p>
+  <h1>${esc(reperesData.titre)}</h1>
+  <p class="tagline">${esc(reperesData.tagline)}${reperesData.taglineItalique ? `<em>${esc(reperesData.taglineItalique)}</em>` : ''}</p>
+</div></header>
+${corps}
+
+<section class="section"><div class="wrap">
+  <p class="cta-centre"><a href="${url('/theories/')}">Consulter le registre →</a></p>
+</div></section>`;
+
+  return page({
+    title: 'Repères — comprendre les théories infirmières',
+    description: "Pourquoi la théorie infirmière compte pour un infirmier en poste : d'où viennent les quatorze besoins, quatre définitions, cent cinquante ans d'histoire, et par où commencer.",
+    current: 'reperes',
+    body
+  });
+}
+
 /* ---------- socle ---------- */
 function socle() {
   const total = socleData.sections.reduce((n, s) => n + s.oeuvres.length, 0);
@@ -532,6 +610,7 @@ write('index.html', accueil());
 write('fil/index.html', pageFil());
 write('theories/index.html', registre());
 write('contribuer/index.html', contribuer());
+write('reperes/index.html', reperes());
 write('socle/index.html', socle());
 write('contact/index.html', contact());
 write('contact/merci/index.html', merci());
