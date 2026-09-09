@@ -299,10 +299,13 @@ function registre() {
   <div class="axis">
     <h2 class="mini">Ce que la taxonomie fait et cache</h2>
     <div class="note">
-      <p>La hiérarchie de Fawcett ordonne l'abstraction, non la maturité empirique ni la portée critique. Plusieurs entrées résistent au classement : Watson oscille entre philosophie et modèle conceptuel, Benner relève de la phénoménologie plus que de la théorisation formelle, la Transitions Theory de Meleis est à la fois cadre intermédiaire et matrice génératrice de théories situationnelles.</p>
+      <p>Les quatre niveaux ordonnent un degré d'abstraction, rien d'autre. Ils ne disent ni la maturité empirique d'une théorie, ni sa valeur, ni son âge : une théorie situationnelle publiée cette année peut être mieux étayée qu'un modèle conceptuel des années 1970.</p>
+      <p>Ce découpage est aussi une simplification. Les manuels de référence décrivent une structure plus fournie — métaparadigme, paradigmes, modèles conceptuels ou grandes théories, théories de moyenne portée, théories de pratique, traditions de recherche, indicateurs empiriques — et insistent sur un point que le classement fait oublier : ces niveaux sont interdépendants, et c'est souvent l'engagement dans la pratique qui produit les idées d'où naissent les théories. Le mouvement ne descend pas du général au particulier.</p>
+      <p>La pyramide est donc un effet de présentation, non une propriété du savoir infirmier. Cleofas (2024) va plus loin et y voit une épistémologie coloniale : hiérarchiser les savoirs par degré d'abstraction reviendrait à reconduire l'ordre qui a placé certaines traditions au sommet et les autres au rang de matériau local. L'objection porte sur le principe même de ce registre ; elle figure dans le registre, à son niveau le plus abstrait.</p>
+      <p>Plusieurs entrées résistent d'ailleurs au classement. Watson oscille entre philosophie et modèle conceptuel. Benner relève de la phénoménologie plus que de la théorisation formelle. La Transitions Theory de Meleis est à la fois un cadre intermédiaire et une matrice génératrice de théories situationnelles. Le classement tranche ; le lecteur peut le contester, et <a href="${url('/contribuer/')}">devrait le faire</a>.</p>
       <p>Aucun répertoire n'est neutre. Celui-ci assume un critère d'inclusion étroit et une lecture critique explicite. Les entrées marquées <span class="added">ajout</span> ne figurent pas dans le répertoire anglophone de référence.</p>
       <p>Le total n'est pas un fait : les théories situationnelles se publient au rythme de plusieurs par an. Ce nombre est un état de la collecte, pas un inventaire de la discipline.</p>
-    </div>
+</div>
   </div>
 </div></div>
 
