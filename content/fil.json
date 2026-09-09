@@ -2,6 +2,18 @@
   "_mode_emploi": "Le fil : ce que je lis et ce que je produis. Une entrée par élément. type : lecture (article, rapport, ouvrage) ou production (vidéo, podcast, communication, publication, carrousel). date au format AAAA-MM-JJ. Le commentaire est le cœur de l'entrée : il dit pourquoi cette lecture compte, pas ce qu'elle contient. Les entrées sont affichées de la plus récente à la plus ancienne ; les dix dernières sur la page d'accueil, toutes sur /fil/.",
   "entrees": [
     {
+      "date": "2026-08-25",
+      "type": "production",
+      "titre": "Examen doctoral, volet rétrospectif — validé",
+      "source": "Doctorat en sciences infirmières, Université Laval · mention succès",
+      "url": "",
+      "commentaire": "Épreuve écrite puis orale devant un comité, consacrée à la mise en dialogue des cadres théoriques qui soutiennent le projet doctoral. L'exercice oblige à aller au-delà d'un simple exposé de lectures : il faut confronter les auteurs mobilisés, assumer leurs tensions plutôt que les aplanir, et expliciter les zones grises de son propre raisonnement. Première des deux étapes de l'examen doctoral.",
+      "tags": [
+        "doctorat",
+        "jalon"
+      ]
+    },
+    {
       "date": "2026-09-08",
       "type": "lecture",
       "titre": "Hauntology and absent presences in contemporary nursing education",
