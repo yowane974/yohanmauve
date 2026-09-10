@@ -1,0 +1,40 @@
+{
+  "_mode_emploi": "Les six prépositions de Cleofas & Abesamis (2026) appliquées non pas aux théories du registre, mais au registre lui-même. Les auteurs procèdent ainsi dans leur article : ils éprouvent leur grammaire sur leurs propres théories plutôt que sur celles des autres. À réécrire à la première personne — le lieu « depuis » ne peut être renseigné que par toi.",
+  "eyebrow": "Réflexivité",
+  "titre": "Six questions posées",
+  "titreItalique": "à ce registre",
+  "chapeau": "Cleofas et Abesamis (2026) proposent six lieux de réflexivité pour tout travail théorique. Ils les éprouvent sur leurs propres théories. Le registre étant lui-même un artefact théorique, il doit s'y soumettre avant de prétendre classer quoi que ce soit.",
+  "loci": [
+    {
+      "preposition": "Depuis",
+      "question": "D'où, et en tant que qui, ce classement est-il fait ?",
+      "reponse": "Depuis La Réunion, par un infirmier formé au modèle français des besoins fondamentaux, aujourd'hui doctorant dans une université nord-américaine. Cette double position rend visible l'écart entre la théorie enseignée en institut et la théorie produite à l'université, et rend probablement aveugle à d'autres choses — notamment à ce que les traditions asiatiques, africaines et lusophones font de leurs propres cadres."
+    },
+    {
+      "preposition": "Sur",
+      "question": "De quoi ce registre affirme-t-il l'existence ?",
+      "reponse": "D'un objet appelé « théorie infirmière », distinct d'une méthode, d'un protocole ou d'une philosophie générale, et suffisamment stable pour être compté. Ce découpage est une décision, pas un constat : il exclut des savoirs qui orientent le soin sans avoir pris la forme d'une théorie publiée."
+    },
+    {
+      "preposition": "Par",
+      "question": "Par quelles traditions et quels instruments ce registre est-il construit ?",
+      "reponse": "Par la taxonomie de Fawcett, par des bases de données majoritairement anglophones — PubMed, répertoires universitaires — et par une lecture critique de langue française. Chacun de ces instruments rend certaines entrées visibles et en laisse d'autres hors de portée : ce qui n'est pas indexé n'est pas trouvé."
+    },
+    {
+      "preposition": "Pour",
+      "question": "Pour qui ce registre est-il fait ?",
+      "reponse": "Pour les infirmières et infirmiers francophones qui n'ont pas accès à la littérature théorique anglophone, et pour les étudiants qui héritent d'un cadre sans en connaître le nom. Accessoirement pour la recherche, qui dispose déjà d'autres instruments."
+    },
+    {
+      "preposition": "Avec",
+      "question": "Avec qui est-il construit ?",
+      "reponse": "Pour l'instant, avec personne. C'est sa faiblesse principale, et elle est structurelle : un répertoire des savoirs marginalisés construit par une seule personne reproduit la concentration d'autorité qu'il prétend décentrer. La page Contribuer existe pour cette raison ; elle ne suffit pas."
+    },
+    {
+      "preposition": "Vers",
+      "question": "Vers quels futurs ce registre oriente-t-il ?",
+      "reponse": "Vers une discipline où le pluralisme théorique serait une ressource ordinaire plutôt qu'une curiosité, et où théoriser depuis un territoire ultramarin n'aurait pas à se justifier. Il court le risque inverse : figer en inventaire ce qui devrait rester un débat."
+    }
+  ],
+  "note_finale": "Ces réponses sont datées et révisables. Elles ne valident pas le registre : elles indiquent où le contester."
+}

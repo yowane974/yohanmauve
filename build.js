@@ -22,6 +22,7 @@ const travaux = read('content/travaux.json');
 const fil = read('content/fil.json');
 const socleData = read('content/socle.json');
 const reperesData = read('content/reperes.json');
+const reflex = read('content/reflexivite.json');
 
 // Espaces insécables de la typographie française : évite les guillemets ou la
 // ponctuation double rejetés seuls en début de ligne.
@@ -330,6 +331,25 @@ function registre() {
       <p><b>Dates.</b> Année de première formulation publiée, non de la dernière édition.</p>
       <p><b>Angles morts assumés.</b> Le recensement reste majoritairement anglophone. Les productions japonaises, thaïlandaises, africaines et arabophones sont très probablement sous-représentées : absence de la collecte, non de la discipline. <a href="${url('/contribuer/')}">Signalez-les</a>.</p>
       <div class="cite">${esc(profil.prenom)} ${esc(profil.nom)} (${cfg.registre.date.slice(0, 4)}). <em>${esc(cfg.registre.titre)}</em>, version ${esc(cfg.registre.version)}.${cfg.registre.doi ? ` https://doi.org/${esc(cfg.registre.doi)}` : ''}${cfg.domaine ? ` https://${esc(cfg.domaine)}/theories/` : ''}</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section nuit-bloc"><div class="wrap">
+  <div class="duo">
+    <div>
+      <p class="eyebrow-rule">${esc(reflex.eyebrow)}</p>
+      <h2>${esc(reflex.titre)}${reflex.titreItalique ? ` <i>${esc(reflex.titreItalique)}</i>` : ''}</h2>
+      <p class="chapeau">${esc(reflex.chapeau)}</p>
+    </div>
+    <div><ol class="loci">
+      ${reflex.loci.map(l => `<li>
+        <p class="prep">${esc(l.preposition)}</p>
+        <p class="q">${esc(l.question)}</p>
+        <p class="r">${esc(l.reponse)}</p>
+      </li>`).join('')}
+      </ol>
+      ${reflex.note_finale ? `<p class="note-fin">${esc(reflex.note_finale)}</p>` : ''}
     </div>
   </div>
 </div></section>

@@ -316,3 +316,12 @@ ul.objs .rep{margin:0;font-size:15.5px;line-height:1.62;color:var(--encre-2)}
 .nuit-bloc .chapeau{color:#9A93A2}
 .nuit-bloc .prose p{color:#C9C2CE}
 .nuit-bloc .prose p:first-child{color:#F2EFEA}
+
+/* ---------- six prépositions ---------- */
+ol.loci{list-style:none;margin:0;padding:0;max-width:64ch}
+ol.loci li{padding:20px 0;border-top:1px solid rgba(242,239,234,.14)}
+ol.loci li:first-child{border-top:0;padding-top:0}
+ol.loci .prep{margin:0 0 6px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--prune-clair)}
+ol.loci .q{margin:0 0 8px;font-family:var(--display);font-size:1.08rem;font-style:italic;color:#F7F4EF}
+ol.loci .r{margin:0;font-size:15.5px;line-height:1.62;color:#C9C2CE}
+.note-fin{margin-top:26px;padding-top:16px;border-top:1px solid rgba(242,239,234,.14);font-size:13.5px;color:#9A93A2;max-width:60ch}

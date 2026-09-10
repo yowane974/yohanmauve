@@ -2,6 +2,19 @@
   "_mode_emploi": "Le fil : ce que je lis et ce que je produis. Une entrée par élément. type : lecture (article, rapport, ouvrage) ou production (vidéo, podcast, communication, publication, carrousel). date au format AAAA-MM-JJ. Le commentaire est le cœur de l'entrée : il dit pourquoi cette lecture compte, pas ce qu'elle contient. Les entrées sont affichées de la plus récente à la plus ancienne ; les dix dernières sur la page d'accueil, toutes sur /fil/.",
   "entrees": [
     {
+      "date": "2026-09-10",
+      "type": "lecture",
+      "titre": "Theorizing from, about, through, for, with, and towards : six prepositions to guide theoretical reflexivity in nursing",
+      "source": "Cleofas, J. V., & Abesamis, L. E. A. (2026). Advances in Nursing Science, 49(2), 143-154",
+      "url": "https://doi.org/10.1097/ANS.0000000000000625",
+      "commentaire": "Six prépositions comme autant de lieux de réflexivité : d'où et en tant que qui je théorise, ce dont j'affirme l'existence, par quelles traditions épistémiques je passe, pour qui la théorie est faite, avec qui elle est construite, vers quels futurs elle oriente. Ce qui me retient, c'est le refus explicite d'en faire une liste de contrôle ou une méthode : les auteurs parlent d'une écologie de relations réflexives, où chaque lieu reconfigure les autres, et ils l'éprouvent sur leurs propres théories plutôt que sur celles des autres. Le geste est plus exigeant qu'une grille d'évaluation, et plus difficile à instrumentaliser.",
+      "tags": [
+        "théorie infirmière",
+        "réflexivité",
+        "décolonialité"
+      ]
+    },
+    {
       "date": "2026-08-25",
       "type": "production",
       "titre": "Examen doctoral, volet rétrospectif — validé",
