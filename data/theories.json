@@ -2794,5 +2794,29 @@
     "resume": "Nomme une catégorie de préjudice propre aux environnements de soin numérisés : les infrastructures algorithmiques et les plateformes ne dégradent pas seulement l'efficience, elles défont les conditions relationnelles qui rendent le soin éthique possible — continuité, reconnaissance mutuelle, présence incarnée, responsabilité communautaire, intégrité de l'identité professionnelle. Le préjudice est dit ontologique, structurel et relationnel, et distinct de la détresse morale comme de l'épuisement.",
     "lecture_critique": "Premier cadre disciplinaire à théoriser explicitement l'effet du numérique sur le soin plutôt qu'à l'évaluer. Sa force est de situer le préjudice dans la conception et la gouvernance des systèmes, non dans des erreurs isolées. Sa fragilité tient à sa convergence hexagonale : ontologie relationnelle africaine, phénoménologie occidentale, philosophies relationnelles « orientales », éthique relationnelle, Labour Process Theory et professionnalisme numérique sont agrégés sans que leurs incompatibilités soient traitées, et le regroupement de Confucius, du bouddhisme et du taoïsme sous une seule catégorie reproduit l'homogénéisation que la critique décoloniale reproche par ailleurs aux cadres dominants. Article théorique sans ancrage empirique ; le parti pris du préjudice ferme par construction la question de ce que la médiation numérique pourrait produire de relationnellement fécond.",
     "hors_nursology": true
+  },
+  {
+    "id": 234,
+    "nom": "Digital-Relational Nursing Framework (DRNF)",
+    "auteurs": "Jonathan Bayuo",
+    "annee": 2026,
+    "niveau": "intermediaire",
+    "niveau_code": "I",
+    "phenomene": "tec",
+    "resume": "Met en dialogue l'ontologie relationnelle africaine — la personne comme devenir moral accompli par la participation communautaire — et la plateformisation du travail infirmier. Cadre à plusieurs niveaux, articulant une dimension ontologique, une dimension éthique et une dimension sociotechnique, pour analyser comment infirmiers et patients deviennent des personnes dans des systèmes de santé numérisés. Reconnaît que les infrastructures fragmentent la continuité relationnelle mais ouvrent aussi des espaces où la relationalité peut être renégociée.",
+    "lecture_critique": "Complète le cadre du préjudice relationnel numérique du même auteur en levant son parti pris : la médiation numérique n'y est plus seulement une perte. La force du texte est de faire de l'ontologie communautaire un instrument de diagnostic plutôt qu'un supplément culturel. Restent deux points ouverts : le cadre revendique une portée pour la discipline entière à partir d'un socle philosophique africain, sans traiter la question de sa transférabilité — ce que les traditions relationnelles non africaines feraient du même raisonnement ; et sa validation demeure argumentative, aucune étude empirique n'en éprouvant les propositions.",
+    "hors_nursology": true
+  },
+  {
+    "id": 235,
+    "nom": "Communal Knowing",
+    "auteurs": "Jonathan Bayuo",
+    "annee": 2026,
+    "niveau": "philosophie",
+    "niveau_code": "P",
+    "phenomene": "epis",
+    "resume": "Propose un mode de connaître absent des typologies infirmières : le savoir communautaire. Issu des philosophies africaines où la personne se constitue par la communauté, il pose qu'on ne peut connaître la personne sans connaître d'abord le collectif. Le savoir y est un processus plutôt qu'une possession, dépendant du contexte, porté par les proverbes, les récits, les rituels et les symboles, transmis sous la conduite des aînés et des ancêtres. La guérison est comprise comme rétablissement d'un équilibre social, spirituel et environnemental, non comme événement biologique isolé.",
+    "lecture_critique": "Premier mode de connaître formulé pour la discipline depuis une épistémologie non occidentale, et à ce titre l'entrée la plus significative de cette section depuis Carper. Il déplace la critique habituelle : il ne s'agit plus de reprocher aux patterns existants leur eurocentrisme, mais d'en produire un autre depuis un ailleurs. L'auteur présente lui-même son texte comme des réflexions préliminaires ; le mode reste programmatique, sans opérationnalisation ni épreuve empirique. Reste ouverte la question de savoir si le savoir communautaire est un pattern supplémentaire à ajouter aux quatre de Carper, ou s'il rend caduque l'idée même d'une liste de patterns constituée depuis un seul lieu.",
+    "hors_nursology": true
   }
 ]
