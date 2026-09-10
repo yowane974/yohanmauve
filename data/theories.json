@@ -2782,5 +2782,17 @@
     "resume": "Construit selon le processus de génération théorique de Chinn & Kramer, le cadre situe la santé relationnelle précoce dans les interactions instant par instant entre donneur de soin et nourrisson, façonnées par l'environnement socio-écologique, et en dérive des points d'appui pour l'action infirmière.",
     "lecture_critique": "Part de l'Early Relational Health, catégorie promue par l'American Academy of Pediatrics, posée comme donnée. Décrit ce qui cultive ou endommage la relation sans thématiser qui définit la relation bonne, ni l'effet de surveillance qu'exerce l'observation fine du lien sur les familles les plus exposées à l'évaluation institutionnelle. Année à confirmer : PubMed indique 2025, le numéro est daté 2026.",
     "hors_nursology": true
+  },
+  {
+    "id": 233,
+    "nom": "Digital-Relational Harm",
+    "auteurs": "Jonathan Bayuo",
+    "annee": 2026,
+    "niveau": "intermediaire",
+    "niveau_code": "I",
+    "phenomene": "tec",
+    "resume": "Nomme une catégorie de préjudice propre aux environnements de soin numérisés : les infrastructures algorithmiques et les plateformes ne dégradent pas seulement l'efficience, elles défont les conditions relationnelles qui rendent le soin éthique possible — continuité, reconnaissance mutuelle, présence incarnée, responsabilité communautaire, intégrité de l'identité professionnelle. Le préjudice est dit ontologique, structurel et relationnel, et distinct de la détresse morale comme de l'épuisement.",
+    "lecture_critique": "Premier cadre disciplinaire à théoriser explicitement l'effet du numérique sur le soin plutôt qu'à l'évaluer. Sa force est de situer le préjudice dans la conception et la gouvernance des systèmes, non dans des erreurs isolées. Sa fragilité tient à sa convergence hexagonale : ontologie relationnelle africaine, phénoménologie occidentale, philosophies relationnelles « orientales », éthique relationnelle, Labour Process Theory et professionnalisme numérique sont agrégés sans que leurs incompatibilités soient traitées, et le regroupement de Confucius, du bouddhisme et du taoïsme sous une seule catégorie reproduit l'homogénéisation que la critique décoloniale reproche par ailleurs aux cadres dominants. Article théorique sans ancrage empirique ; le parti pris du préjudice ferme par construction la question de ce que la médiation numérique pourrait produire de relationnellement fécond.",
+    "hors_nursology": true
   }
 ]
