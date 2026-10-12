@@ -1,5 +1,5 @@
 {
-  "_mode_emploi": "Une entrée par publication ou communication. Le champ type accepte : article, chapitre, communication, poster, rapport, autre. Le champ statut accepte : publie, accepte, soumis, en-preparation. Les entrées en-preparation ne sont affichées que si afficher_travaux_en_cours vaut true dans build.js.",
+  "_mode_emploi": "Une entrée par publication. Le champ type accepte : article, chapitre, rapport, autre. Le champ statut accepte : publie, accepte, soumis, en-preparation. Les entrées en-preparation ne sont affichées que si afficher_travaux_en_cours vaut true dans build.js. Les communications, posters et conférences sont désormais saisis dans content/interventions.json.",
   "publications": [
     {
       "type": "article",
@@ -22,35 +22,6 @@
       "doi": "",
       "url": "",
       "acces_libre": false
-    }
-  ],
-  "communications": [
-    {
-      "type": "communication",
-      "statut": "publie",
-      "auteurs": "Mauve, Y., Sasseville, M., & Gagnon, M.-P.",
-      "annee": 2026,
-      "titre": "Articuler les savoirs dans le jugement clinique infirmier en soins intensifs numérisés : protocole d'une théorisation ancrée constructiviste",
-      "support": "Communication orale, Conférence de l'ALASS, Université de Montréal, Québec, Canada (27-29 août)",
-      "url": ""
-    },
-    {
-      "type": "communication",
-      "statut": "publie",
-      "auteurs": "Yousefi, F., Gagnon, M.-P., Naffi, N., Sasseville, M., Nadali, M., Ahouehome, R., Adnane, F. A., Mauve, Y., & Naye, F.",
-      "annee": 2026,
-      "titre": "Mapping the Integration of Artificial Intelligence (AI) in Health Professions Education: A Scoping Review Protocol",
-      "support": "Résumé étendu, Canadian International Conference on Education (CICE 2026), 20 juillet",
-      "url": ""
-    },
-    {
-      "type": "poster",
-      "statut": "publie",
-      "auteurs": "Mauve, Y., Sasseville, M., & Gagnon, M.-P.",
-      "annee": 2025,
-      "titre": "De la littératie numérique à la praxis critique : un balado narratif pour développer la pensée critique infirmière",
-      "support": "Poster, 2ᵉ Congrès de pédagogie en santé de l'océan Indien, Saint-Leu, La Réunion (novembre)",
-      "url": ""
     }
   ]
 }

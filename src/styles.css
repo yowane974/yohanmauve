@@ -325,3 +325,54 @@ ol.loci .prep{margin:0 0 6px;font-family:var(--mono);font-size:11px;letter-spaci
 ol.loci .q{margin:0 0 8px;font-family:var(--display);font-size:1.08rem;font-style:italic;color:#F7F4EF}
 ol.loci .r{margin:0;font-size:15.5px;line-height:1.62;color:#C9C2CE}
 .note-fin{margin-top:26px;padding-top:16px;border-top:1px solid rgba(242,239,234,.14);font-size:13.5px;color:#9A93A2;max-width:60ch}
+
+/* ---------- interventions ---------- */
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px 28px;justify-content:center;align-items:center;margin:38px 0 0}
+.btn{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;background:var(--prune);color:var(--creme);border:1px solid var(--prune);padding:14px 26px;text-decoration:none;transition:background .18s ease,color .18s ease}
+.btn:hover{background:transparent;color:var(--prune)}
+.btn-ghost{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--prune);text-decoration:none;border-bottom:1px solid var(--prune);padding-bottom:4px}
+.lien-plus{margin:26px 0 0}
+.lien-plus a{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--prune);padding-bottom:3px}
+
+.iv-list{display:grid}
+.iv{display:grid;grid-template-columns:96px 1fr;gap:0 26px;padding:26px 0;border-top:1px solid var(--rule)}
+.iv:first-child{border-top:0;padding-top:0}
+.iv-date{display:flex;flex-direction:column;gap:5px;padding-top:2px}
+.iv-date .d{font-family:var(--display);font-size:2.4rem;line-height:1;letter-spacing:-.02em;color:var(--encre);font-variant-numeric:lining-nums;white-space:nowrap}
+.iv-date .m{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--encre-2)}
+.iv-date .w{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--encre-3)}
+.is-futur .iv-date .d{color:var(--prune)}
+.iv-meta{display:flex;flex-wrap:wrap;gap:6px 8px;margin:0 0 11px}
+.iv-tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--rule);color:var(--encre-2);padding:3px 8px;white-space:nowrap}
+.iv-tag.futur{background:var(--prune);border-color:var(--prune);color:var(--creme)}
+.iv-tag.role{color:var(--encre-3);border-style:dashed}
+.iv h3{font-size:1.3rem;line-height:1.28;margin:0 0 9px}
+.iv-event{margin:0;font-size:15.5px;color:var(--encre)}
+.iv-org{margin:3px 0 0;font-size:14.5px;color:var(--encre-2)}
+.chapeau.espace{margin-top:20px}
+.iv-lieu{font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:var(--encre-3);margin:7px 0 0}
+.iv-auteurs{font-size:14px;color:var(--encre-3);margin:9px 0 0}
+.iv-qualite{font-family:var(--display);font-style:italic;font-size:15px;color:var(--encre-2);margin:9px 0 0}
+.iv-resume{font-size:15.5px;line-height:1.62;color:var(--encre-2);margin:15px 0 0;max-width:64ch}
+.iv-liens{display:flex;flex-wrap:wrap;gap:8px 22px;margin:15px 0 0;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase}
+.iv-liens a{text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.compact .iv{padding:20px 0}
+.compact .iv:first-child{padding-top:0}
+.compact .iv h3{font-size:1.15rem}
+.compact .iv-date .d{font-size:2rem}
+.iv-bloc + .iv-bloc{margin-top:50px}
+.iv-annee{display:flex;align-items:baseline;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--prune);border-bottom:2px solid var(--encre);padding-bottom:9px;margin:0 0 26px}
+.iv-annee .n{margin-left:auto;color:var(--encre-3);letter-spacing:.1em}
+@media (max-width:560px){
+  .iv{grid-template-columns:1fr;gap:12px}
+  .iv-date{flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+  .iv-date .d,.compact .iv-date .d{font-size:1.7rem}
+}
+
+.themes-chapeau{max-width:56ch;margin-top:22px}
+.themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px 44px;margin-top:52px}
+.theme{border-top:1px solid rgba(242,239,234,.18);padding-top:18px}
+.theme .num{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--prune-clair);margin-bottom:12px}
+.theme h3{color:#F7F4EF;font-size:1.3rem;margin:0 0 10px}
+.theme p{margin:0;font-size:15px;line-height:1.6;color:#C9C2CE}
+h3.sous{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--prune);font-weight:400;margin:46px 0 20px;padding-top:24px;border-top:1px solid var(--rule)}

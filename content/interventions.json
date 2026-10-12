@@ -1,0 +1,129 @@
+{
+  "_mode_emploi": [
+    "Source unique de toutes les prises de parole : elle alimente la page /interventions/ et l'extrait de l'accueil. Ne plus rien saisir dans travaux.json pour les communications.",
+    "date : AAAA-MM-JJ, ou AAAA-MM si le jour n'est pas connu. date_fin : facultatif, pour un événement sur plusieurs jours dont on ne connaît pas le jour exact de l'intervention.",
+    "À venir ou passée : calculé automatiquement au moment de la génération du site, à l'heure de La Réunion. Le workflow regénère le site chaque nuit, il n'y a donc rien à déplacer à la main.",
+    "type : conference-invitee, communication-orale, communication, poster, table-ronde, formation, atelier, seminaire, entretien.",
+    "role : orateur (par défaut) ou coauteur, pour une communication présentée par une autre personne.",
+    "auteurs : à renseigner seulement s'il y a des co-auteurs. qualite : facultatif, phrase affichée telle quelle sous l'événement (par exemple « Au titre de l'ERER La Réunion »).",
+    "liens : liste de { label, url } — programme, diapositives, enregistrement, article de presse. Liens simples, aucune vidéo intégrée : le site ne charge aucun traceur.",
+    "accueil : false pour exclure une entrée de l'extrait de la page d'accueil."
+  ],
+  "eyebrow": "Conférences · communications · formations",
+  "tagline": "Conférences, communications et formations sur les savoirs infirmiers, l'IA en santé et l'éthique.",
+  "taglineItalique": "Penser le soin depuis La Réunion, et pas seulement à son sujet.",
+  "interventions": [
+    {
+      "date": "2026-11-19",
+      "heure": "15 h",
+      "type": "communication-orale",
+      "titre": "L'usage de l'intelligence artificielle en santé à l'île de La Réunion : une approche par les épistémologies du Sud",
+      "evenement": "Colloque national des Espaces de réflexion éthique régionaux — « IA en santé : enjeux éthiques pour une révolution responsable ? »",
+      "organisateur": "ERENA et CNERER",
+      "session": "Session 4 · Usagers et territoires",
+      "lieu": "Domaine du Haut-Carré, Université de Bordeaux, Talence",
+      "pays": "France",
+      "qualite": "Au titre de l'Espace de réflexion éthique régional de La Réunion",
+      "resume": "À partir des épistémologies du Sud, cette communication interroge les usages de l'intelligence artificielle en santé à La Réunion : quels savoirs ces systèmes reconnaissent, lesquels ils laissent hors champ, et à quelles conditions une éthique de l'IA pensée depuis un territoire ultramarin peut éviter de reconduire la hiérarchie des savoirs qu'elle prétend corriger.",
+      "_a_valider": "résumé rédigé à partir du titre, à relire",
+      "liens": [
+        { "label": "Programme du colloque", "url": "https://bordeaux.espace-ethique-na.fr/obj/original_20261005114355-261005_programmeoklight.pdf" }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "type": "conference-invitee",
+      "titre": "Science, recherche, théorie : ce que savent les sciences infirmières, et d'où elles le savent",
+      "evenement": "Journée des 20 ans de l'Ordre national des infirmiers à La Réunion",
+      "organisateur": "Conseil régional de l'Ordre des infirmiers La Réunion-Mayotte",
+      "lieu": "La Réunion",
+      "pays": "France",
+      "resume": "Présenter les sciences infirmières à la profession qui les pratique. Distinguer la science, la recherche et la théorie ; revenir sur ce que la philosophie des sciences dit de la production des connaissances ; situer les grandes traditions épistémologiques de la discipline. En conclusion, un plaidoyer : La Réunion a besoin d'études et de théories qui partent de la réalité des Réunionnais, et c'est aussi la manière la plus concrète de répondre à l'appel de la discipline à décoloniser ses savoirs.",
+      "_a_valider": "titre proposé, à remplacer par le titre réel ; lieu exact à préciser",
+      "liens": [
+        { "label": "Annonce de la journée", "url": "https://imazpress.com/actus-reunion/20-ans-de-l-ordre-national-des-infirmiers-a-la-reunion-une-journee-d-echange-organisee-ce-vendredi" }
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "date_fin": "2026-08-29",
+      "type": "communication-orale",
+      "titre": "Articuler les savoirs dans le jugement clinique infirmier en soins intensifs numérisés : protocole d'une théorisation ancrée constructiviste",
+      "auteurs": "Mauve, Y., Sasseville, M., & Gagnon, M.-P.",
+      "evenement": "Conférence de l'ALASS — Association latine pour l'analyse des systèmes de santé",
+      "lieu": "Université de Montréal, Montréal (Québec)",
+      "pays": "Canada",
+      "resume": "Le protocole de la thèse : une théorisation ancrée constructiviste pour comprendre comment les infirmières articulent savoirs tacites, relationnels et numériques dans le jugement clinique en soins intensifs, et ce que les dispositifs numériques font à ces savoirs.",
+      "_a_valider": "résumé rédigé à partir du titre, à relire",
+      "liens": []
+    },
+    {
+      "date": "2026-07-20",
+      "type": "communication",
+      "role": "coauteur",
+      "titre": "Mapping the Integration of Artificial Intelligence (AI) in Health Professions Education: A Scoping Review Protocol",
+      "auteurs": "Yousefi, F., Gagnon, M.-P., Naffi, N., Sasseville, M., Nadali, M., Ahouehome, R., Adnane, F. A., Mauve, Y., & Naye, F.",
+      "evenement": "Canadian International Conference on Education (CICE 2026) — résumé étendu",
+      "lieu": "",
+      "pays": "",
+      "resume": "",
+      "liens": [],
+      "accueil": false
+    },
+    {
+      "date": "2025-11",
+      "type": "poster",
+      "titre": "De la littératie numérique à la praxis critique : un balado narratif pour développer la pensée critique infirmière",
+      "auteurs": "Mauve, Y., Sasseville, M., & Gagnon, M.-P.",
+      "evenement": "2ᵉ Congrès de pédagogie en santé de l'océan Indien",
+      "lieu": "Saint-Leu, La Réunion",
+      "pays": "France",
+      "resume": "",
+      "liens": []
+    }
+  ],
+  "themes": [
+    {
+      "titre": "Ce que savent les sciences infirmières",
+      "texte": "Distinguer science, recherche et théorie ; situer les traditions épistémologiques de la discipline ; comprendre pourquoi la pluralité des savoirs n'est pas un défaut de rigueur."
+    },
+    {
+      "titre": "IA et jugement clinique",
+      "texte": "Ce que les dispositifs numériques rendent visible ou crédible au chevet du patient, et ce qu'ils font aux savoirs tacites et relationnels. Autorité cognitive automatisée, délégation du jugement."
+    },
+    {
+      "titre": "Éthique de l'IA depuis les Suds",
+      "texte": "Lire les usages de l'IA en santé à partir des épistémologies du Sud : quels savoirs ces systèmes reconnaissent, lesquels ils effacent, et ce que cela engage pour les territoires ultramarins."
+    },
+    {
+      "titre": "Théories situées, savoirs réunionnais",
+      "texte": "Pourquoi La Réunion a besoin d'études et de théories qui partent de la réalité de celles et ceux qui y vivent. Décolonisation des savoirs infirmiers, théorisation réflexive."
+    },
+    {
+      "titre": "IA générative et formation infirmière",
+      "texte": "Ce que l'IA générative change à l'apprentissage du raisonnement clinique. Pédagogie critique, pratique fondée sur les données probantes sans dogmatisme."
+    },
+    {
+      "titre": "Littératies critiques en santé",
+      "texte": "Rechercher et évaluer l'information, reconnaître la désinformation, comprendre comment se fabrique une preuve : pour les soignants comme pour les citoyens."
+    },
+    {
+      "titre": "Délibération éthique en pratique",
+      "texte": "Faire vivre la réflexion éthique dans les équipes : situations cliniques, délibération collective, éthique de la recherche."
+    }
+  ],
+  "formats": [
+    { "titre": "Conférence", "texte": "Plénière ou conférence invitée, de 30 à 60 minutes, suivie d'un échange avec la salle." },
+    { "titre": "Communication", "texte": "Congrès ou colloque scientifique, dans le format fixé par le comité." },
+    { "titre": "Table ronde", "texte": "Discussion à plusieurs voix. Une préparation commune des questions est bienvenue." },
+    { "titre": "Formation, atelier", "texte": "Demi-journée ou journée auprès d'équipes soignantes, d'étudiants ou de formateurs, à partir de situations tirées de leur pratique." },
+    { "titre": "Cours, séminaire", "texte": "Intervention en formation initiale, en master ou en séminaire doctoral." },
+    { "titre": "Entretien, podcast", "texte": "Médias et vulgarisation, à condition que le format laisse le temps de nuancer." }
+  ],
+  "pratique": [
+    { "terme": "Depuis", "texte": "Saint-Pierre, La Réunion (UTC+4)." },
+    { "terme": "Présentiel", "texte": "À La Réunion et dans l'océan Indien ; en France hexagonale et au Québec lorsque le calendrier le permet." },
+    { "terme": "Distanciel", "texte": "Partout ailleurs, en tenant compte du décalage horaire." },
+    { "terme": "Langues", "texte": "Français ; anglais sur demande." }
+  ]
+}

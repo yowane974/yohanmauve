@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Regénération nocturne (1 h à La Réunion) : une intervention passée bascule
+  # d'elle-même de « À venir » vers les archives, sans commit.
+  schedule:
+    - cron: '0 21 * * *'
 
 permissions:
   contents: read

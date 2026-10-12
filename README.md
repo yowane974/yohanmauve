@@ -10,7 +10,8 @@ Aucune dépendance, aucun framework. `node build.js` génère `dist/`.
 ```
 site.config.json      domaine, identité, version et licence du registre
 content/profil.json   biographie, axes de recherche, affiliations
-content/travaux.json  publications et communications
+content/travaux.json  publications
+content/interventions.json  conférences, communications, posters, thèmes d'intervention
 data/theories.json    LE registre — une entrée par théorie
 data/taxonomies.json  les 4 niveaux d'abstraction et les 14 phénomènes
 src/styles.css        feuille de style unique

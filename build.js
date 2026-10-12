@@ -23,6 +23,7 @@ const fil = read('content/fil.json');
 const socleData = read('content/socle.json');
 const reperesData = read('content/reperes.json');
 const reflex = read('content/reflexivite.json');
+const ivData = read('content/interventions.json');
 
 // Espaces insécables de la typographie française : évite les guillemets ou la
 // ponctuation double rejetés seuls en début de ligne.
@@ -90,6 +91,7 @@ ${FONTS}
   <nav>
     <a href="${url('/')}"${current === 'accueil' ? ' aria-current="page"' : ''}>Accueil</a>
     <a href="${url('/fil/')}"${current === 'fil' ? ' aria-current="page"' : ''}>Fil</a>
+    <a href="${url('/interventions/')}"${current === 'interventions' ? ' aria-current="page"' : ''}>Interventions</a>
     <a href="${url('/reperes/')}"${current === 'reperes' ? ' aria-current="page"' : ''}>Repères</a>
     <a href="${url('/theories/')}"${current === 'theories' ? ' aria-current="page"' : ''}>Registre</a>
     <a href="${url('/socle/')}"${current === 'socle' ? ' aria-current="page"' : ''}>Socle</a>
@@ -131,12 +133,83 @@ function entreesFil(limite) {
   }).join('');
 }
 
+/* ---------- interventions : rendu partagé ---------- */
+const TYPE_IV = {
+  'conference-invitee': 'Conférence invitée',
+  'communication-orale': 'Communication orale',
+  communication: 'Communication',
+  poster: 'Poster',
+  'table-ronde': 'Table ronde',
+  formation: 'Formation',
+  atelier: 'Atelier',
+  seminaire: 'Séminaire',
+  entretien: 'Entretien'
+};
+const MOIS_C = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
+const JOURS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+
+// « À venir » se décide à la génération, à l'heure de La Réunion (UTC+4).
+// Le workflow regénère le site chaque nuit : une intervention bascule d'elle-même
+// dans les archives le lendemain de sa date.
+const AUJOURDHUI = new Date(Date.now() + 4 * 3600e3).toISOString().slice(0, 10);
+const finIv = e => { const f = e.date_fin || e.date; return f.length === 7 ? f + '-31' : f; };
+const estAVenir = e => finIv(e) >= AUJOURDHUI;
+const parDateAsc = (a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
+const parDateDesc = (a, b) => -parDateAsc(a, b);
+
+const ivToutes = (ivData.interventions || []).filter(e => e && e.date && e.titre);
+const ivFutures = ivToutes.filter(estAVenir).sort(parDateAsc);
+const ivPassees = ivToutes.filter(e => !estAVenir(e)).sort(parDateDesc);
+
+function dateIv(e, avecAnnee) {
+  const [a, m, j] = e.date.split('-');
+  const mois = MOIS_C[Number(m) - 1] + (avecAnnee ? ' ' + a : '');
+  if (!j) return { d: '', m: mois, w: '' };
+  let d = String(Number(j));
+  let w = JOURS[new Date(e.date + 'T12:00:00Z').getUTCDay()];
+  if (e.date_fin && e.date_fin !== e.date) {
+    const [, m2, j2] = e.date_fin.split('-');
+    d += '–' + Number(j2);
+    w = '';
+    if (m2 !== m) return { d: '', m: `${j} ${MOIS_C[Number(m) - 1]} – ${Number(j2)} ${MOIS_C[Number(m2) - 1]}${avecAnnee ? ' ' + a : ''}`, w: '' };
+  }
+  if (e.heure) w = w ? `${w} · ${e.heure}` : e.heure;
+  return { d, m: mois, w };
+}
+
+function itemIv(e, opts) {
+  const o = Object.assign({ compact: false, annee: true }, opts);
+  const futur = estAVenir(e);
+  const dt = dateIv(e, o.annee);
+  const lieu = [e.session, [e.lieu, e.pays].filter(Boolean).join(', ')].filter(Boolean).join(' · ');
+  const tags = [
+    futur ? '<span class="iv-tag futur">À venir</span>' : '',
+    TYPE_IV[e.type] ? `<span class="iv-tag">${TYPE_IV[e.type]}</span>` : '',
+    e.role === 'coauteur' ? '<span class="iv-tag role">Co-auteur</span>' : ''
+  ].join('');
+  const liens = (e.liens || []).filter(l => l && l.url);
+  return `<article class="iv${futur ? ' is-futur' : ''}">
+    <div class="iv-date">${dt.d ? `<span class="d">${dt.d}</span>` : ''}<span class="m">${esc(dt.m)}</span>${dt.w ? `<span class="w">${esc(dt.w)}</span>` : ''}</div>
+    <div class="iv-body">
+      <p class="iv-meta">${tags}</p>
+      <h3>${esc(e.titre)}</h3>
+      <p class="iv-event">${esc(e.evenement)}</p>
+      ${e.organisateur ? `<p class="iv-org">${esc(e.organisateur)}</p>` : ''}
+      ${lieu ? `<p class="iv-lieu">${esc(lieu)}</p>` : ''}
+      ${!o.compact && e.auteurs ? `<p class="iv-auteurs">${esc(e.auteurs)}</p>` : ''}
+      ${!o.compact && e.qualite ? `<p class="iv-qualite">${esc(e.qualite)}</p>` : ''}
+      ${!o.compact && e.resume ? `<p class="iv-resume">${esc(e.resume)}</p>` : ''}
+      ${!o.compact && liens.length ? `<p class="iv-liens">${liens.map(l => `<a href="${lien(l.url)}" rel="noopener">${esc(l.label)} ↗</a>`).join('')}</p>` : ''}
+    </div>
+  </article>`;
+}
+
 /* ---------- accueil ---------- */
 function accueil() {
   const STATUT = { accepte: 'accepté', soumis: 'soumis', 'en-preparation': 'en préparation' };
   const garde = w => afficher_travaux_en_cours || w.statut !== 'en-preparation';
   const pubs = travaux.publications.filter(garde);
-  const comms = travaux.communications.filter(garde);
+  const ivAccueil = ivFutures.concat(ivPassees).filter(e => e.accueil !== false).slice(0, 4);
 
   const listeTravaux = (items, vide) => items.length
     ? `<ul class="works">${items.map(w => `<li><span class="y">${w.annee || 'à paraître'}</span> — ${esc(w.auteurs).replace(/\.$/, '')}. <span class="t">${w.url ? `<a href="${esc(w.url)}">${esc(w.titre)}</a>` : esc(w.titre)}</span>. <em>${esc(w.support)}</em>.${w.doi ? ` <a href="https://doi.org/${esc(w.doi)}">doi:${esc(w.doi)}</a>` : ''}${STATUT[w.statut] ? `<span class="st">${STATUT[w.statut]}</span>` : ''}</li>`).join('')}</ul>`
@@ -214,8 +287,11 @@ function accueil() {
 
 <section class="section"><div class="wrap">
   <div class="duo">
-    <div><p class="eyebrow-rule">Communications</p><h2>Congrès</h2></div>
-    <div>${listeTravaux(comms, 'Section à compléter — voir content/travaux.json.')}</div>
+    <div>
+      <p class="eyebrow-rule">Prendre la parole</p><h2>Interventions</h2>
+      <p class="lien-plus"><a href="${url('/interventions/')}">Toutes les interventions →</a></p>
+    </div>
+    <div>${ivAccueil.length ? `<div class="iv-list compact">${ivAccueil.map(e => itemIv(e, { compact: true })).join('')}</div>` : '<p class="empty-note">Section à compléter — voir content/interventions.json.</p>'}</div>
   </div>
 </div></section>
 
@@ -528,6 +604,157 @@ ${corps}`;
   });
 }
 
+/* ---------- interventions ---------- */
+function formulaireInvitation() {
+  const f = cfg.formulaire || {};
+  const mail = cfg.auteur.courriel_perso || cfg.auteur.courriel_registre;
+  if (!f.web3formsKey) {
+    return `<div class="callout"><p>Écrivez à <a href="mailto:${esc(mail)}?subject=${encodeURIComponent("Demande d'intervention")}">${esc(mail)}</a> en précisant le public, la date envisagée et le format.</p></div>`;
+  }
+  const motif = (f.motifs || []).find(m => /intervention/i.test(m)) || 'Intervention';
+  const formats = (ivData.formats || []).map(x => `<option>${esc(x.titre)}</option>`).join('');
+  const themes = (ivData.themes || []).map(x => `<option>${esc(x.titre)}</option>`).join('');
+  return `<form class="form" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="${esc(f.web3formsKey)}">
+  <input type="hidden" name="subject" value="Demande d'intervention — ${esc(cfg.domaine || 'site')}">
+  <input type="hidden" name="from_name" value="${esc(cfg.domaine || 'Site')}">
+  <input type="hidden" name="Motif" value="${esc(motif)}">
+  <input type="hidden" name="redirect" value="https://${esc(cfg.domaine)}${url('/contact/merci/')}">
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <div class="field-row">
+    <p class="field"><label for="i-nom">Nom <span class="req">*</span></label>
+      <input id="i-nom" name="Nom" type="text" required autocomplete="name"></p>
+    <p class="field"><label for="i-mail">Courriel <span class="req">*</span></label>
+      <input id="i-mail" name="email" type="email" required autocomplete="email"></p>
+  </div>
+  <div class="field-row">
+    <p class="field"><label for="i-org">Organisation <span class="req">*</span></label>
+      <input id="i-org" name="Organisation" type="text" required autocomplete="organization"></p>
+    <p class="field"><label for="i-evt">Événement</label>
+      <input id="i-evt" name="Événement" type="text"></p>
+  </div>
+  <div class="field-row">
+    <p class="field"><label for="i-dates">Date(s) envisagée(s)</label>
+      <input id="i-dates" name="Dates" type="text"></p>
+    <p class="field"><label for="i-lieu">Lieu</label>
+      <input id="i-lieu" name="Lieu" type="text"></p>
+  </div>
+  <div class="field-row">
+    <p class="field"><label for="i-format">Format</label>
+      <select id="i-format" name="Format">
+        <option value="" selected>À définir</option>
+        ${formats}
+        <option>Autre</option>
+      </select></p>
+    <p class="field"><label for="i-mod">Modalité</label>
+      <select id="i-mod" name="Modalité">
+        <option value="" selected>À définir</option>
+        <option>Présentiel</option>
+        <option>Distanciel</option>
+        <option>Hybride</option>
+      </select></p>
+  </div>
+  <p class="field"><label for="i-public">Public — nature et effectif</label>
+    <input id="i-public" name="Public" type="text"></p>
+  <p class="field"><label for="i-theme">Thème</label>
+    <select id="i-theme" name="Thème">
+      <option value="" selected>À discuter</option>
+      ${themes}
+      <option>Autre</option>
+    </select></p>
+  <p class="field"><label for="i-msg">Contexte et attentes <span class="req">*</span></label>
+    <textarea id="i-msg" name="Message" rows="6" required></textarea></p>
+
+  <div class="form-foot">
+    <button type="submit">Envoyer la demande</button>
+    ${f.delaiReponse ? `<span class="hint">${esc(f.delaiReponse)}</span>` : ''}
+  </div>
+  <p class="legal">Les champs de ce formulaire sont transmis par le service Web3Forms, qui les réexpédie à ${esc(mail)} sans les conserver durablement. Écrivez directement à cette adresse si vous préférez éviter l'intermédiaire.</p>
+</form>`;
+}
+
+function pageInterventions() {
+  const annees = [...new Set(ivPassees.map(e => e.date.slice(0, 4)))];
+  const mail = cfg.auteur.courriel_perso || cfg.auteur.courriel_registre;
+
+  const body = `
+<header class="hero"><div class="wrap">
+  <p class="eyebrow">${esc(ivData.eyebrow)}</p>
+  <h1>Interventions<span class="dot">.</span></h1>
+  <p class="tagline">${esc(ivData.tagline)}${ivData.taglineItalique ? `<em>${esc(ivData.taglineItalique)}</em>` : ''}</p>
+  <p class="hero-actions"><a class="btn" href="#inviter">Proposer une intervention →</a><a class="btn-ghost" href="#themes">Les thèmes</a></p>
+</div></header>
+
+<section class="section"><div class="wrap">
+  <div class="duo">
+    <div><p class="eyebrow-rule">À venir</p><h2>Prochaines <i>dates</i></h2></div>
+    <div>${ivFutures.length
+      ? `<div class="iv-list">${ivFutures.map(e => itemIv(e)).join('')}</div>`
+      : `<p class="empty-note">Aucune date annoncée pour l'instant.</p>`}</div>
+  </div>
+</div></section>
+
+${ivPassees.length ? `<section class="section alt"><div class="wrap">
+  <div class="duo">
+    <div>
+      <p class="eyebrow-rule">Archives</p><h2>Interventions <i>passées</i></h2>
+      <p class="chapeau espace">Conférences, communications et posters depuis ${esc(ivToutes.map(e => e.date.slice(0, 4)).sort()[0])}, du plus récent au plus ancien.</p>
+    </div>
+    <div>${annees.map(a => {
+      const lot = ivPassees.filter(e => e.date.startsWith(a));
+      return `<div class="iv-bloc">
+        <h3 class="iv-annee"><span>${a}</span><span class="n">${lot.length}</span></h3>
+        <div class="iv-list">${lot.map(e => itemIv(e, { annee: false })).join('')}</div>
+      </div>`;
+    }).join('')}</div>
+  </div>
+</div></section>` : ''}
+
+<section class="section nuit-bloc" id="themes"><div class="wrap">
+  <p class="eyebrow-rule">Thèmes</p>
+  <h2>De quoi <i>je parle</i></h2>
+  <p class="chapeau themes-chapeau">Des sujets plutôt que des conférences toutes faites : chaque intervention se prépare pour son public, à partir de ce qu'il sait déjà et de ce qu'il cherche.</p>
+  <div class="themes">
+    ${(ivData.themes || []).map((t, i) => `<div class="theme">
+      <span class="num">${String(i + 1).padStart(2, '0')}</span>
+      <h3>${esc(t.titre)}</h3>
+      <p>${esc(t.texte)}</p>
+    </div>`).join('')}
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="duo">
+    <div><p class="eyebrow-rule">Formats</p><h2>Sous quelle <i>forme</i></h2></div>
+    <div>
+      <dl class="spec">${(ivData.formats || []).map(x => `<dt>${esc(x.titre)}</dt><dd>${esc(x.texte)}</dd>`).join('')}</dl>
+      ${(ivData.pratique || []).length ? `<h3 class="sous">En pratique</h3>
+      <dl class="spec">${ivData.pratique.map(x => `<dt>${esc(x.terme)}</dt><dd>${esc(x.texte)}</dd>`).join('')}</dl>` : ''}
+    </div>
+  </div>
+</div></section>
+
+<section class="section alt" id="inviter"><div class="wrap">
+  <div class="duo">
+    <div>
+      <p class="eyebrow-rule">Inviter</p>
+      <h2>Proposer une <i>intervention</i></h2>
+      <p class="chapeau espace">Le public, une date, un format : cela suffit pour une première réponse. Le contenu se construit ensuite, ensemble.</p>
+      <p class="adresse"><a href="mailto:${esc(mail)}?subject=${encodeURIComponent("Demande d'intervention")}">${esc(mail)}</a></p>
+    </div>
+    <div>${formulaireInvitation()}</div>
+  </div>
+</div></section>`;
+
+  return page({
+    title: 'Interventions',
+    description: `Conférences, communications et formations de ${profil.prenom} ${profil.nom} : épistémologie des sciences infirmières, IA en santé, éthique et savoirs situés. Proposer une intervention.`,
+    current: 'interventions',
+    body
+  });
+}
+
 /* ---------- contact ---------- */
 function formulaire() {
   const f = cfg.formulaire || {};
@@ -588,6 +815,7 @@ function contact() {
       <h2>Par <i>courriel</i></h2>
       <p class="adresse"><a href="mailto:${esc(mail)}">${esc(mail)}</a><br>${esc(profil.contact.lieu)}</p>
       <p class="note-inline">Pour une théorie absente du registre, lisez d'abord <a href="${url('/contribuer/')}">ce qu'une proposition doit contenir</a> : c'est ce qui fait la différence entre un signalement traité et un signalement en attente.</p>
+      <p class="note-inline">Pour une conférence, une formation ou une table ronde, <a href="${url('/interventions/#inviter')}">le formulaire d'invitation</a> demande d'emblée ce qui permet de répondre vite.</p>
     </div>
     <div>${formulaire()}</div>
   </div>
@@ -631,6 +859,7 @@ fs.rmSync(DIST, { recursive: true, force: true });
 console.log('Génération du site :');
 write('index.html', accueil());
 write('fil/index.html', pageFil());
+write('interventions/index.html', pageInterventions());
 write('theories/index.html', registre());
 write('contribuer/index.html', contribuer());
 write('reperes/index.html', reperes());
